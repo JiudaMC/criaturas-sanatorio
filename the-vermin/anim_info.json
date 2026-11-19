@@ -1,0 +1,1585 @@
+{
+ "grupos": {
+  "vermin": {
+   "archivo": "anim_vermin.json",
+   "clips": [
+    "Vermin_Acecho",
+    "Vermin_Agachado",
+    "Vermin_Asoma",
+    "Vermin_Caza",
+    "Vermin_Desarme",
+    "Vermin_EntraRejilla",
+    "Vermin_Forcejeo",
+    "Vermin_Gatea",
+    "Vermin_PuertaRota",
+    "Vermin_Quieto",
+    "Vermin_Rearme",
+    "Vermin_Remate",
+    "Vermin_SaleRejilla",
+    "Vermin_Zarpazo"
+   ],
+   "kb": 10169,
+   "utileria": {
+    "Vermin_Agachado": [
+     "Escena_Agachado_DuctoParedDer",
+     "Escena_Agachado_DuctoParedIzq",
+     "Escena_Agachado_DuctoPiso",
+     "Escena_Agachado_DuctoTecho"
+    ],
+    "Vermin_Asoma": [
+     "Escena_Asoma_Muro"
+    ],
+    "Vermin_Desarme": [
+     "Escena_Desarme_Marco",
+     "Escena_Desarme_Rata01",
+     "Escena_Desarme_Rata02",
+     "Escena_Desarme_Rata03",
+     "Escena_Desarme_Rata04",
+     "Escena_Desarme_Rata05",
+     "Escena_Desarme_Rata06",
+     "Escena_Desarme_Rata07",
+     "Escena_Desarme_Rata08",
+     "Escena_Desarme_Rata09",
+     "Escena_Desarme_Rata10",
+     "Escena_Desarme_Rata11",
+     "Escena_Desarme_Rata12",
+     "Escena_Desarme_Rata13",
+     "Escena_Desarme_Rata14",
+     "Escena_Desarme_Rata15",
+     "Escena_Desarme_Rata16",
+     "Escena_Desarme_Rata17",
+     "Escena_Desarme_Rata18",
+     "Escena_Desarme_Rata19",
+     "Escena_Desarme_Rata20",
+     "Escena_Desarme_Rata21",
+     "Escena_Desarme_Rata22",
+     "Escena_Desarme_Rata23",
+     "Escena_Desarme_Rata24",
+     "Escena_Desarme_Rejilla"
+    ],
+    "Vermin_EntraRejilla": [
+     "Escena_EntraRejilla_Marco",
+     "Escena_EntraRejilla_Pozo",
+     "Escena_EntraRejilla_Rejilla"
+    ],
+    "Vermin_Gatea": [
+     "Escena_Gatea_DuctoParedDer",
+     "Escena_Gatea_DuctoParedIzq",
+     "Escena_Gatea_DuctoPiso",
+     "Escena_Gatea_DuctoTecho"
+    ],
+    "Vermin_Rearme": [
+     "Escena_Rearme_Marco",
+     "Escena_Rearme_Rata01",
+     "Escena_Rearme_Rata02",
+     "Escena_Rearme_Rata03",
+     "Escena_Rearme_Rata04",
+     "Escena_Rearme_Rata05",
+     "Escena_Rearme_Rata06",
+     "Escena_Rearme_Rata07",
+     "Escena_Rearme_Rata08",
+     "Escena_Rearme_Rata09",
+     "Escena_Rearme_Rata10",
+     "Escena_Rearme_Rata11",
+     "Escena_Rearme_Rata12",
+     "Escena_Rearme_Rata13",
+     "Escena_Rearme_Rata14",
+     "Escena_Rearme_Rata15",
+     "Escena_Rearme_Rata16",
+     "Escena_Rearme_Rata17",
+     "Escena_Rearme_Rata18",
+     "Escena_Rearme_Rata19",
+     "Escena_Rearme_Rata20",
+     "Escena_Rearme_Rata21",
+     "Escena_Rearme_Rata22",
+     "Escena_Rearme_Rata23",
+     "Escena_Rearme_Rata24",
+     "Escena_Rearme_Rejilla"
+    ],
+    "Vermin_Remate": [
+     "Escena_Remate_Rata01",
+     "Escena_Remate_Rata02",
+     "Escena_Remate_Rata03",
+     "Escena_Remate_Rata04",
+     "Escena_Remate_Rata05",
+     "Escena_Remate_Rata06",
+     "Escena_Remate_Rata07",
+     "Escena_Remate_Rata08",
+     "Escena_Remate_Rata09",
+     "Escena_Remate_Rata10",
+     "Escena_Remate_Rata11",
+     "Escena_Remate_Rata12",
+     "Jugador_R15_Head",
+     "Jugador_R15_LeftFoot",
+     "Jugador_R15_LeftHand",
+     "Jugador_R15_LeftLowerArm",
+     "Jugador_R15_LeftLowerLeg",
+     "Jugador_R15_LeftUpperArm",
+     "Jugador_R15_LeftUpperLeg",
+     "Jugador_R15_LowerTorso",
+     "Jugador_R15_RightFoot",
+     "Jugador_R15_RightHand",
+     "Jugador_R15_RightLowerArm",
+     "Jugador_R15_RightLowerLeg",
+     "Jugador_R15_RightUpperArm",
+     "Jugador_R15_RightUpperLeg",
+     "Jugador_R15_UpperTorso"
+    ],
+    "Vermin_SaleRejilla": [
+     "Escena_SaleRejilla_Marco",
+     "Escena_SaleRejilla_Pozo",
+     "Escena_SaleRejilla_Rejilla"
+    ],
+    "Vermin_Forcejeo": [
+     "Puerta_Forcejeo_Dintel",
+     "Puerta_Forcejeo_Hoja",
+     "Puerta_Forcejeo_MarcoDer",
+     "Puerta_Forcejeo_MarcoIzq"
+    ],
+    "Vermin_PuertaRota": [
+     "Puerta_PuertaRota_Dintel",
+     "Puerta_PuertaRota_Hoja",
+     "Puerta_PuertaRota_MarcoDer",
+     "Puerta_PuertaRota_MarcoIzq"
+    ]
+   }
+  }
+ },
+ "clips": {
+  "Vermin_Desarme": {
+   "rig": "Vermin_Rig",
+   "cuadros": 100,
+   "segundos": 3.333,
+   "loop": false,
+   "prioridad": "Action2",
+   "velocidad": null,
+   "marcas": [
+    [
+     0,
+     "Squeak",
+     ""
+    ],
+    [
+     10,
+     "Scurry",
+     ""
+    ],
+    [
+     18,
+     "Oculta",
+     "Vermin_ManoIzq,Vermin_ManoDer"
+    ],
+    [
+     20,
+     "Oculta",
+     "Vermin_Piernas"
+    ],
+    [
+     44,
+     "Cae",
+     ""
+    ],
+    [
+     56,
+     "Oculta",
+     "Vermin_Relleno,Vermin_Cuello,Vermin_Colas,Vermin_Ojos"
+    ]
+   ],
+   "revision": {
+    "piso": -0.272,
+    "cuadro_mas_bajo": 0,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "La linterna lo desarma: se encoge de un tirón (Squeak 0), la bata se vence a tirones (Pose_Desarme, 6–30) y cae vacía de espaldas (Pose_BataVacia, 30–58; Cae 44). Las manos se meten a las mangas y las piernas a la bata (trasladando sus huesos); en Roblox se vuelven transparentes con las marcas Oculta (18: manos, 20: piernas, 56: relleno, cuello, colas y ojos: solo queda la bata). Las ratas (Escena_Desarme_Rata01..24, copias rígidas de la rata) salen corriendo de abajo del dobladillo y de las mangas (10–40), se juntan y se van EN FILA a la rejilla del piso (Escena_Desarme_Rejilla, en x 5.2, y -3.6) y se meten por las ranuras (la última en 94).",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.03,
+      60
+     ],
+     "Vermin_Relleno": [
+      0.02,
+      30
+     ],
+     "Vermin_Piernas": [
+      -0.272,
+      0
+     ],
+     "Vermin_ManoIzq": [
+      0.263,
+      10
+     ],
+     "Vermin_ManoDer": [
+      0.275,
+      10
+     ],
+     "Vermin_Cuello": [
+      0.843,
+      30
+     ],
+     "Vermin_Colas": [
+      0.021,
+      54
+     ],
+     "Vermin_Ojos": [
+      0.912,
+      30
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "colgantes_detenidos_en_piso": 375,
+    "colgantes_subidos_studs": {
+     "HemTailB2": 0.045,
+     "HemTailB3": 0.135
+    },
+    "utileria": [
+     "Escena_Desarme_Marco",
+     "Escena_Desarme_Rata01",
+     "Escena_Desarme_Rata02",
+     "Escena_Desarme_Rata03",
+     "Escena_Desarme_Rata04",
+     "Escena_Desarme_Rata05",
+     "..."
+    ]
+   }
+  },
+  "_leeme": "Fase 4 de The Vermin (El Costal) y su rata suelta: vermin_v2_anim.py + vermin_v2_anim_clips.py + vermin_v2_anim_rata.py, sobre art/vermin/vermin_v3_rig.blend. Cada clip: cuadros a 30 fps, segundos, loop, prioridad, velocidad de diseño (studs/s; en el juego AdjustSpeed(rapidez / velocidad); Config todavía no tiene velocidades de The Vermin: son propuestas), marcas [cuadro, nombre, valor] (en Roblox, KeyframeMarkers en la Fase 5; 'Oculta'/'Muestra' dicen qué mallas pasan a Transparency 1 o vuelven), 'revision' (la del framework: piso y cierre; el piso es negativo porque Vermin_Piernas ya baja a -0.272 en el reposo de la Fase 2) y 'revision_vermin' (piso por malla contra el reposo, cierre sin signo, pies y manos apoyados sin patinar, ducto 4 x 6, hueco de la rejilla 3 x 3, puerta y jugador). La utilería de cada clip va en el .blend como mallas aparte (Escena_<Clip>_*, Puerta_<Clip>_*, Jugador_R15_*), con su propia Action de transformación, para el visor 3D.",
+  "Vermin_Quieto": {
+   "rig": "Vermin_Rig",
+   "cuadros": 120,
+   "segundos": 4.0,
+   "loop": true,
+   "prioridad": "Idle",
+   "velocidad": null,
+   "marcas": [
+    [
+     16,
+     "Scurry",
+     ""
+    ],
+    [
+     26,
+     "Squeak",
+     ""
+    ],
+    [
+     52,
+     "Scurry",
+     ""
+    ],
+    [
+     75,
+     "Scurry",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.272,
+    "cuadro_mas_bajo": 0,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "De pie, encorvado (Pose_Reposo), 4 s en loop. No está quieto: la bata respira y hierve por dentro (los paños ClothFront1/2 y ClothBack se mueven y de pronto una rata empuja desde adentro: 16, 52, 75 y 97), los dedos-rata se crispan cada uno a su ritmo, las colas del cuello y del dobladillo se mueven solas y el hueco del cuello cuelga y se ladea despacio con dos tirones (26 y 84, congelados un cuadro). Los pies no se mueven.",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.898,
+      54
+     ],
+     "Vermin_Relleno": [
+      1.019,
+      20
+     ],
+     "Vermin_Piernas": [
+      -0.272,
+      0
+     ],
+     "Vermin_ManoIzq": [
+      0.572,
+      84
+     ],
+     "Vermin_ManoDer": [
+      0.582,
+      20
+     ],
+     "Vermin_Cuello": [
+      2.523,
+      30
+     ],
+     "Vermin_Colas": [
+      0.03,
+      72
+     ],
+     "Vermin_Ojos": [
+      3.15,
+      22
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "colgantes_detenidos_en_piso": 109,
+    "utileria": []
+   }
+  },
+  "Vermin_Acecho": {
+   "rig": "Vermin_Rig",
+   "cuadros": 40,
+   "segundos": 1.333,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 2.4,
+   "marcas": [
+    [
+     0,
+     "Step",
+     "L"
+    ],
+    [
+     20,
+     "Step",
+     "R"
+    ],
+    [
+     31,
+     "Squeak",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.272,
+    "cuadro_mas_bajo": 28,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "Camina lento y encorvado (Acecho y Búsqueda), arrastrando el dobladillo: un paso de cada pierna = 3.20 studs por ciclo (velocidad·L/30); velocidad de diseño 2.4 studs/s (PROPUESTA: sus piernas son una masa corta de ratas, ~1.35 studs; a 8 studs/s el AdjustSpeed lo apura 3.3 veces). Cada tobillo apoya 22 de 40 cuadros y se recorre hacia atrás a 2.4 studs/s; levanta los pies apenas 0.22 (arrastra). La cadera baja 0.48 y se mece, el tronco va 40% hacia Pose_Caza, los brazos cuelgan y se mecen a destiempo, el hueco del cuello rebota tarde con cada paso y da un tirón (31); la tela y las colas se arrastran atrás.",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.39,
+      20
+     ],
+     "Vermin_Relleno": [
+      0.425,
+      20
+     ],
+     "Vermin_Piernas": [
+      -0.272,
+      28
+     ],
+     "Vermin_ManoIzq": [
+      0.572,
+      14
+     ],
+     "Vermin_ManoDer": [
+      0.756,
+      0
+     ],
+     "Vermin_Cuello": [
+      2.004,
+      12
+     ],
+     "Vermin_Colas": [
+      0.014,
+      16
+     ],
+     "Vermin_Ojos": [
+      2.623,
+      18
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "patina_studs_por_cuadro": {
+     "tobillo_L": 0.0,
+     "tobillo_R": 0.0
+    },
+    "alcance_max": {
+     "pierna_L": 0.947,
+     "pierna_R": 0.947
+    },
+    "colgantes_detenidos_en_piso": 124,
+    "colgantes_subidos_studs": {
+     "HemTailF3": 0.004,
+     "HemTailB2": 0.086,
+     "HemTailB3": 0.116
+    },
+    "utileria": []
+   }
+  },
+  "Vermin_Asoma": {
+   "rig": "Vermin_Rig",
+   "cuadros": 96,
+   "segundos": 3.2,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     11,
+     "Step",
+     "L"
+    ],
+    [
+     16,
+     "Step",
+     "R"
+    ],
+    [
+     46,
+     "Squeak",
+     ""
+    ],
+    [
+     66,
+     "Step",
+     "R"
+    ],
+    [
+     71,
+     "Step",
+     "L"
+    ]
+   ],
+   "revision": {
+    "piso": -0.212,
+    "cuadro_mas_bajo": 12,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "Se asoma tras una esquina (Escena_Asoma_Muro: muro de 7 de alto cuya orilla queda en x = 0.51): empieza escondido 1.6 studs a su derecha, sale de lado con dos pasos (11–23), se ladea hasta Pose_Acecho con la mano izquierda dándole la vuelta a la orilla y el hueco del cuello ladeado; se queda mirando (el hueco se ladea más despacio, tirones en 46 y 54), y se esconde de golpe (64–80, dos pasos de regreso). Termina igual que empieza (se puede repetir). El Root se mueve de lado (−1.6 → 0 → −1.6).",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.493,
+      16
+     ],
+     "Vermin_Relleno": [
+      0.667,
+      16
+     ],
+     "Vermin_Piernas": [
+      -0.212,
+      66
+     ],
+     "Vermin_ManoIzq": [
+      0.372,
+      74
+     ],
+     "Vermin_ManoDer": [
+      0.397,
+      74
+     ],
+     "Vermin_Cuello": [
+      1.623,
+      24
+     ],
+     "Vermin_Colas": [
+      0.019,
+      22
+     ],
+     "Vermin_Ojos": [
+      1.964,
+      50
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "pies_se_mueven": {
+     "tobillo_L": 1.6,
+     "tobillo_R": 1.6
+    },
+    "alcance_max": {
+     "pierna_L": 0.949,
+     "pierna_R": 0.989,
+     "brazo_L": 0.977,
+     "brazo_R": 0.0
+    },
+    "colgantes_detenidos_en_piso": 207,
+    "colgantes_subidos_studs": {
+     "HemTailF3": 0.081,
+     "HemTailB2": 0.006,
+     "HemTailB3": 0.108
+    },
+    "utileria": [
+     "Escena_Asoma_Muro"
+    ]
+   }
+  },
+  "Vermin_Caza": {
+   "rig": "Vermin_Rig",
+   "cuadros": 16,
+   "segundos": 0.533,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 13.5,
+   "marcas": [
+    [
+     0,
+     "Step",
+     "L"
+    ],
+    [
+     4,
+     "Scurry",
+     ""
+    ],
+    [
+     8,
+     "Step",
+     "R"
+    ]
+   ],
+   "revision": {
+    "piso": -0.252,
+    "cuadro_mas_bajo": 9,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "Caza: corre rápido y encorvado (Pose_Caza), los brazos al frente con las garras abriéndose y cerrándose a destiempo. Dos zancadas cortas = 7.2 studs por loop (velocidad·L/30); velocidad de diseño 13.5 studs/s (PROPUESTA; Config.Entity.ChaseSpeed no tiene a The Vermin). Cada tobillo apoya 4 de 16 cuadros (se recorre a 13.5 studs/s) y entre pisadas va en el aire; la cadera rebota. El hueco del cuello va al frente dando tirones; las colas y la tela se arrastran 25° atrás.",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.214,
+      8
+     ],
+     "Vermin_Relleno": [
+      0.374,
+      8
+     ],
+     "Vermin_Piernas": [
+      -0.252,
+      10
+     ],
+     "Vermin_ManoIzq": [
+      0.631,
+      2
+     ],
+     "Vermin_ManoDer": [
+      0.623,
+      10
+     ],
+     "Vermin_Cuello": [
+      1.249,
+      10
+     ],
+     "Vermin_Colas": [
+      0.026,
+      8
+     ],
+     "Vermin_Ojos": [
+      1.792,
+      2
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "patina_studs_por_cuadro": {
+     "tobillo_L": 0.0,
+     "tobillo_R": 0.0
+    },
+    "alcance_max": {
+     "pierna_L": 0.967,
+     "pierna_R": 0.967
+    },
+    "colgantes_detenidos_en_piso": 50,
+    "colgantes_subidos_studs": {
+     "HemTailB3": 0.129
+    },
+    "utileria": []
+   }
+  },
+  "Vermin_Zarpazo": {
+   "rig": "Vermin_Rig",
+   "cuadros": 28,
+   "segundos": 0.933,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     5,
+     "Squeak",
+     ""
+    ],
+    [
+     9,
+     "Hit",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.166,
+    "cuadro_mas_bajo": 0,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "El zarpazo (desde Pose_Caza y de vuelta a ella): se tuerce y sube la garra derecha a tirones (Pose_Zarpazo, los dedos-rata se abren 25°), la baja de golpe al frente y la cierra en el aire (Hit 9: la muñeca pasa a ~3.2 studs al frente y las garras a ~3.7, a la altura del pecho del jugador) y regresa a tirones. Los pies no se mueven.",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.429,
+      10
+     ],
+     "Vermin_Relleno": [
+      0.754,
+      0
+     ],
+     "Vermin_Piernas": [
+      -0.166,
+      0
+     ],
+     "Vermin_ManoIzq": [
+      1.048,
+      10
+     ],
+     "Vermin_ManoDer": [
+      1.419,
+      28
+     ],
+     "Vermin_Cuello": [
+      1.209,
+      10
+     ],
+     "Vermin_Colas": [
+      0.03,
+      14
+     ],
+     "Vermin_Ojos": [
+      1.57,
+      10
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "pies_se_mueven": {
+     "tobillo_L": 0.0,
+     "tobillo_R": 0.0
+    },
+    "alcance_max": {
+     "pierna_L": 0.978,
+     "pierna_R": 0.939,
+     "brazo_L": 0.0,
+     "brazo_R": 1.004
+    },
+    "cuadros_sin_alcanzar": {
+     "brazo_R": 1
+    },
+    "colgantes_detenidos_en_piso": 67,
+    "colgantes_subidos_studs": {
+     "HemTailF3": 0.002
+    },
+    "utileria": []
+   }
+  },
+  "Vermin_Remate": {
+   "rig": "Vermin_Rig",
+   "cuadros": 130,
+   "segundos": 4.333,
+   "loop": false,
+   "prioridad": "Action3",
+   "velocidad": null,
+   "marcas": [
+    [
+     6,
+     "Squeak",
+     ""
+    ],
+    [
+     11,
+     "Step",
+     "R"
+    ],
+    [
+     12,
+     "Grab",
+     ""
+    ],
+    [
+     16,
+     "Scurry",
+     ""
+    ],
+    [
+     30,
+     "Scurry",
+     ""
+    ],
+    [
+     46,
+     "Pull",
+     ""
+    ],
+    [
+     66,
+     "Land",
+     ""
+    ],
+    [
+     80,
+     "Squeak",
+     ""
+    ],
+    [
+     100,
+     "Scurry",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.252,
+    "cuadro_mas_bajo": 65,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "El remate (sin sangre ni heridas): sale de la caza, se yergue de golpe (Pose_Reposo, da un paso con el pie derecho) y le agarra los dos brazos al jugador por delante con las manos de ratas (Grab 12); las ratas se le suben por los brazos, los hombros, el pecho y la cabeza (Escena_Remate_Rata01..12, copias rígidas; Scurry 16 y 30); el jugador forcejea, se le doblan las rodillas (Pull 46) y lo tiran de espaldas al piso (Land 66) con las piernas hacia el Costal, que se agacha (Pose_Agachado) y le sujeta las espinillas, con el hueco del cuello colgando sobre él, y las ratas le siguen corriendo encima hasta el final. El jugador (Jugador_R15_*, R15 de bloques de 5.2 studs) está en el .blend con sus Actions; su clip de Roblox se arma en la Fase 5 con la misma tabla (jugador_r15() en este archivo).",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.03,
+      78
+     ],
+     "Vermin_Relleno": [
+      0.209,
+      66
+     ],
+     "Vermin_Piernas": [
+      -0.252,
+      62
+     ],
+     "Vermin_ManoIzq": [
+      0.29,
+      64
+     ],
+     "Vermin_ManoDer": [
+      0.236,
+      64
+     ],
+     "Vermin_Cuello": [
+      0.608,
+      100
+     ],
+     "Vermin_Colas": [
+      0.017,
+      54
+     ],
+     "Vermin_Ojos": [
+      0.776,
+      116
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "vertices_dentro_del_jugador": 3655,
+    "cuadro_peor_jugador": 58,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "alcance_max": {
+     "pierna_L": 1.043,
+     "pierna_R": 0.939,
+     "brazo_L": 1.046,
+     "brazo_R": 1.046
+    },
+    "cuadros_sin_alcanzar": {
+     "pierna_L": 7,
+     "brazo_L": 13,
+     "brazo_R": 9
+    },
+    "colgantes_detenidos_en_piso": 477,
+    "colgantes_subidos_studs": {
+     "HemTailF2": 0.029,
+     "HemTailF3": 0.077,
+     "HemTailB3": 0.204
+    },
+    "utileria": [
+     "Escena_Remate_Rata01",
+     "Escena_Remate_Rata02",
+     "Escena_Remate_Rata03",
+     "Escena_Remate_Rata04",
+     "Escena_Remate_Rata05",
+     "Escena_Remate_Rata06",
+     "..."
+    ]
+   }
+  },
+  "Vermin_Agachado": {
+   "rig": "Vermin_Rig",
+   "cuadros": 36,
+   "segundos": 1.2,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 3.4,
+   "marcas": [
+    [
+     0,
+     "Step",
+     "L"
+    ],
+    [
+     18,
+     "Step",
+     "R"
+    ]
+   ],
+   "revision": {
+    "piso": -0.272,
+    "cuadro_mas_bajo": 22,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "Agachado dentro del ducto de 4 x 6 (Pose_Agachado): camina en cuclillas, 4.08 studs por ciclo; velocidad de diseño 3.4 studs/s (PROPUESTA). Cada tobillo apoya 18 de 36 cuadros. Casi no se mece de lado (en la pose le sobran 0.10 a cada pared); las manos cuelgan cerca del piso y los dedos-rata rozan; el hueco del cuello cuelga al frente. Escena_Agachado_Ducto: el ducto de lámina.",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.1,
+      18
+     ],
+     "Vermin_Relleno": [
+      0.134,
+      18
+     ],
+     "Vermin_Piernas": [
+      -0.272,
+      22
+     ],
+     "Vermin_ManoIzq": [
+      0.068,
+      16
+     ],
+     "Vermin_ManoDer": [
+      0.062,
+      16
+     ],
+     "Vermin_Cuello": [
+      0.569,
+      14
+     ],
+     "Vermin_Colas": [
+      0.026,
+      16
+     ],
+     "Vermin_Ojos": [
+      0.968,
+      10
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "ducto_x_max": 1.967,
+    "ducto_z_max": 4.057,
+    "ducto_vertices_fuera": 0,
+    "cabe_en_ducto": true,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "patina_studs_por_cuadro": {
+     "tobillo_L": 0.0,
+     "tobillo_R": 0.0
+    },
+    "alcance_max": {
+     "pierna_L": 0.902,
+     "pierna_R": 0.902
+    },
+    "colgantes_detenidos_en_piso": 148,
+    "colgantes_subidos_studs": {
+     "HemTailB3": 0.218
+    },
+    "utileria": [
+     "Escena_Agachado_DuctoParedDer",
+     "Escena_Agachado_DuctoParedIzq",
+     "Escena_Agachado_DuctoPiso",
+     "Escena_Agachado_DuctoTecho"
+    ]
+   }
+  },
+  "Vermin_Gatea": {
+   "rig": "Vermin_Rig",
+   "cuadros": 24,
+   "segundos": 0.8,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 4.2,
+   "marcas": [
+    [
+     0,
+     "Step",
+     "L"
+    ],
+    [
+     12,
+     "Step",
+     "R"
+    ]
+   ],
+   "revision": {
+    "piso": -0.266,
+    "cuadro_mas_bajo": 9,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.098
+   },
+   "nota": "Gatea dentro del ducto de 4 x 6 (Pose_Gatea): manos y rodillas en diagonal (mano izquierda con pierna derecha en 0, la otra pareja en 12), 3.36 studs por ciclo; velocidad de diseño 4.2 studs/s (PROPUESTA; el Técnico gatea a 8). Cada mano apoya 10 de 24 cuadros y se recorre hacia atrás a 4.2 studs/s (no patina); las piernas, que son masa de ratas bajo la bata, se arrastran de rodillas (no tienen apoyo fijo). Casi no se mece de lado (en la pose le sobran 0.11 a cada pared); el hueco va al frente con tirones.",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.22,
+      12
+     ],
+     "Vermin_Relleno": [
+      -0.027,
+      20
+     ],
+     "Vermin_Piernas": [
+      -0.266,
+      8
+     ],
+     "Vermin_ManoIzq": [
+      0.099,
+      6
+     ],
+     "Vermin_ManoDer": [
+      0.07,
+      16
+     ],
+     "Vermin_Cuello": [
+      0.191,
+      6
+     ],
+     "Vermin_Colas": [
+      -0.098,
+      0
+     ],
+     "Vermin_Ojos": [
+      0.691,
+      6
+     ]
+    },
+    "piso_de_mas": 0.098,
+    "ducto_x_max": 1.951,
+    "ducto_z_max": 3.872,
+    "ducto_vertices_fuera": 0,
+    "cabe_en_ducto": true,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "patina_studs_por_cuadro": {
+     "muneca_L": 0.0,
+     "muneca_R": 0.0
+    },
+    "alcance_max": {
+     "brazo_L": 0.964,
+     "brazo_R": 0.964
+    },
+    "colgantes_detenidos_en_piso": 33,
+    "colgantes_subidos_studs": {
+     "NeckTailA3": 0.085,
+     "NeckTailB3": 0.097
+    },
+    "utileria": [
+     "Escena_Gatea_DuctoParedDer",
+     "Escena_Gatea_DuctoParedIzq",
+     "Escena_Gatea_DuctoPiso",
+     "Escena_Gatea_DuctoTecho"
+    ]
+   }
+  },
+  "Vermin_SaleRejilla": {
+   "rig": "Vermin_Rig",
+   "cuadros": 110,
+   "segundos": 3.667,
+   "loop": false,
+   "prioridad": "Action2",
+   "velocidad": null,
+   "marcas": [
+    [
+     6,
+     "Rejilla",
+     ""
+    ],
+    [
+     14,
+     "Rejilla",
+     ""
+    ],
+    [
+     22,
+     "Clank",
+     ""
+    ],
+    [
+     26,
+     "Grab",
+     ""
+    ],
+    [
+     34,
+     "Scurry",
+     ""
+    ],
+    [
+     44,
+     "Scurry",
+     ""
+    ],
+    [
+     78,
+     "Step",
+     "L"
+    ],
+    [
+     84,
+     "Step",
+     "R"
+    ]
+   ],
+   "revision": {
+    "piso": -5.376,
+    "cuadro_mas_bajo": 0,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "Sale por una rejilla del piso de 3 x 3 (Escena_SaleRejilla_*; el hueco queda 2.2 studs DETRÁS del Root final): las ratas empujan la rejilla desde abajo (Rejilla 6 y 14), salta y cae a un lado (Clank 22); las manos salen primero por encima de la cabeza y se apoyan en el piso a los lados del hueco (Grab 26), se jala hacia arriba en tres tirones (Pose_Rejilla), sube las piernas por dentro del hueco, sale al frente de dos pasos (Step 78 y 84; Pose_Agachado, el Root va de +2.5 a 0) y se endereza en Pose_Reposo. Los hombros y los paños se aprietan para pasar por el hueco.",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      -4.25,
+      2
+     ],
+     "Vermin_Relleno": [
+      -4.005,
+      0
+     ],
+     "Vermin_Piernas": [
+      -5.376,
+      0
+     ],
+     "Vermin_ManoIzq": [
+      -0.028,
+      70
+     ],
+     "Vermin_ManoDer": [
+      -0.041,
+      0
+     ],
+     "Vermin_Cuello": [
+      -2.518,
+      10
+     ],
+     "Vermin_Colas": [
+      -5.238,
+      0
+     ],
+     "Vermin_Ojos": [
+      -2.091,
+      10
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "bajo_piso_fuera_del_hueco": 4572,
+    "cuadro_peor_hueco": 0,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "alcance_max": {
+     "pierna_L": 0.999,
+     "pierna_R": 0.999,
+     "brazo_L": 0.935,
+     "brazo_R": 0.935
+    },
+    "cuadros_sin_alcanzar": {
+     "pierna_L": 0,
+     "pierna_R": 0
+    },
+    "colgantes_detenidos_en_piso": 66,
+    "utileria": [
+     "Escena_SaleRejilla_Marco",
+     "Escena_SaleRejilla_Pozo",
+     "Escena_SaleRejilla_Rejilla"
+    ]
+   }
+  },
+  "Vermin_EntraRejilla": {
+   "rig": "Vermin_Rig",
+   "cuadros": 90,
+   "segundos": 3.0,
+   "loop": false,
+   "prioridad": "Action2",
+   "velocidad": null,
+   "marcas": [
+    [
+     8,
+     "Squeak",
+     ""
+    ],
+    [
+     28,
+     "Step",
+     "R"
+    ],
+    [
+     34,
+     "Step",
+     "L"
+    ],
+    [
+     38,
+     "Grab",
+     ""
+    ],
+    [
+     44,
+     "Scurry",
+     ""
+    ],
+    [
+     60,
+     "Scurry",
+     ""
+    ],
+    [
+     84,
+     "Clank",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -5.776,
+    "cuadro_mas_bajo": 78,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "Se mete por una rejilla del piso de 3 x 3 que queda 2.2 studs DETRÁS de él (Escena_EntraRejilla_*; la rejilla está tirada a un lado, como la dejó SaleRejilla): se agacha, da dos pasos atrás hasta la orilla del hueco (Step 28 y 34), se deja caer de espaldas con las manos apoyadas a los lados (Grab 38), se hunde a tirones, las manos se meten por encima de la cabeza y desaparece; las colas jalan la rejilla de regreso a su lugar (Clank 84). El Root va de 0 a +2.5 y baja 5.6.",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      -4.652,
+      82
+     ],
+     "Vermin_Relleno": [
+      -4.405,
+      76
+     ],
+     "Vermin_Piernas": [
+      -5.776,
+      76
+     ],
+     "Vermin_ManoIzq": [
+      -0.426,
+      76
+     ],
+     "Vermin_ManoDer": [
+      -0.441,
+      76
+     ],
+     "Vermin_Cuello": [
+      -3.122,
+      76
+     ],
+     "Vermin_Colas": [
+      -5.739,
+      88
+     ],
+     "Vermin_Ojos": [
+      -2.733,
+      90
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "bajo_piso_fuera_del_hueco": 5979,
+    "cuadro_peor_hueco": 78,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "alcance_max": {
+     "pierna_L": 0.999,
+     "pierna_R": 0.999,
+     "brazo_L": 0.94,
+     "brazo_R": 0.94
+    },
+    "cuadros_sin_alcanzar": {
+     "pierna_L": 0,
+     "pierna_R": 0
+    },
+    "colgantes_detenidos_en_piso": 58,
+    "utileria": [
+     "Escena_EntraRejilla_Marco",
+     "Escena_EntraRejilla_Pozo",
+     "Escena_EntraRejilla_Rejilla"
+    ]
+   }
+  },
+  "Vermin_Rearme": {
+   "rig": "Vermin_Rig",
+   "cuadros": 110,
+   "segundos": 3.667,
+   "loop": false,
+   "prioridad": "Action2",
+   "velocidad": null,
+   "marcas": [
+    [
+     6,
+     "Scurry",
+     ""
+    ],
+    [
+     56,
+     "Muestra",
+     "Vermin_Relleno,Vermin_Cuello,Vermin_Colas,Vermin_Ojos"
+    ],
+    [
+     66,
+     "Squeak",
+     ""
+    ],
+    [
+     88,
+     "Muestra",
+     "Vermin_ManoIzq,Vermin_ManoDer"
+    ],
+    [
+     88,
+     "Muestra",
+     "Vermin_Piernas"
+    ],
+    [
+     90,
+     "Squeak",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.292,
+    "cuadro_mas_bajo": 104,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.021
+   },
+   "nota": "Se vuelve a armar (después de Vermin_Desarme): las ratas (Escena_Rearme_Rata01..24) salen en fila por la rejilla del piso (Escena_Rearme_Rejilla) y corren a meterse por el dobladillo de la bata vacía (6–60); la bata hierve cada vez más mientras se llena, y se levanta a tirones: Pose_BataVacia → Pose_Desarme (56–76) → Pose_Reposo (80–106). Las marcas Muestra devuelven lo transparente (56: relleno, cuello, colas y ojos; 88: manos y piernas); las manos salen de las mangas y las piernas de la bata (sus huesos regresan). Termina en Pose_Reposo con la bata todavía hirviendo (las capas vivas siguen, como en Vermin_Quieto).",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.03,
+      24
+     ],
+     "Vermin_Relleno": [
+      0.02,
+      78
+     ],
+     "Vermin_Cuello": [
+      0.833,
+      78
+     ],
+     "Vermin_Colas": [
+      0.022,
+      80
+     ],
+     "Vermin_Ojos": [
+      0.906,
+      78
+     ],
+     "Vermin_Piernas": [
+      -0.293,
+      102
+     ],
+     "Vermin_ManoIzq": [
+      0.202,
+      88
+     ],
+     "Vermin_ManoDer": [
+      0.269,
+      88
+     ]
+    },
+    "piso_de_mas": 0.021,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "colgantes_detenidos_en_piso": 410,
+    "colgantes_subidos_studs": {
+     "HemTailF3": 0.003,
+     "HemTailB2": 0.039,
+     "HemTailB3": 0.175
+    },
+    "utileria": [
+     "Escena_Rearme_Marco",
+     "Escena_Rearme_Rata01",
+     "Escena_Rearme_Rata02",
+     "Escena_Rearme_Rata03",
+     "Escena_Rearme_Rata04",
+     "Escena_Rearme_Rata05",
+     "..."
+    ]
+   }
+  },
+  "Vermin_Forcejeo": {
+   "rig": "Vermin_Rig",
+   "cuadros": 36,
+   "segundos": 1.2,
+   "loop": true,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     11,
+     "DoorHit",
+     ""
+    ],
+    [
+     20,
+     "Scurry",
+     ""
+    ],
+    [
+     28,
+     "DoorHit",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.166,
+    "cuadro_mas_bajo": 15,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "Forcejea con una puerta cerrada de madera de 8 x 9 (Puerta_Forcejeo_*, su cara a 3.95 studs al frente del Root): las dos manos de ratas contra la hoja arañando hacia abajo a tirones, se echa atrás y la embiste con el pecho y el hueco del cuello (DoorHit 11) y otra más chica (DoorHit 28). La hoja tiembla en la bisagra. Los pies no se mueven.",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.422,
+      34
+     ],
+     "Vermin_Relleno": [
+      0.75,
+      12
+     ],
+     "Vermin_Piernas": [
+      -0.166,
+      10
+     ],
+     "Vermin_ManoIzq": [
+      2.06,
+      18
+     ],
+     "Vermin_ManoDer": [
+      2.122,
+      14
+     ],
+     "Vermin_Cuello": [
+      1.123,
+      12
+     ],
+     "Vermin_Colas": [
+      0.03,
+      14
+     ],
+     "Vermin_Ojos": [
+      1.546,
+      12
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "vertices_tras_la_puerta": 0,
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "pies_se_mueven": {
+     "tobillo_L": 0.0,
+     "tobillo_R": 0.0
+    },
+    "alcance_max": {
+     "pierna_L": 0.996,
+     "pierna_R": 0.963,
+     "brazo_L": 0.934,
+     "brazo_R": 0.919
+    },
+    "colgantes_detenidos_en_piso": 56,
+    "colgantes_subidos_studs": {
+     "HemTailF3": 0.005,
+     "HemTailB3": 0.022
+    },
+    "utileria": [
+     "Puerta_Forcejeo_Dintel",
+     "Puerta_Forcejeo_Hoja",
+     "Puerta_Forcejeo_MarcoDer",
+     "Puerta_Forcejeo_MarcoIzq"
+    ]
+   }
+  },
+  "Vermin_PuertaRota": {
+   "rig": "Vermin_Rig",
+   "cuadros": 44,
+   "segundos": 1.467,
+   "loop": false,
+   "prioridad": "Action3",
+   "velocidad": null,
+   "marcas": [
+    [
+     8,
+     "DoorHit",
+     ""
+    ],
+    [
+     12,
+     "DoorBreak",
+     ""
+    ],
+    [
+     14,
+     "Squeak",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.166,
+    "cuadro_mas_bajo": 15,
+    "cierre_grados": 0.0,
+    "piso_de_mas": 0.0
+   },
+   "nota": "Revienta la puerta (desde el cuadro 0 de Vermin_Forcejeo): se echa atrás a tirones (las manos se le resbalan de la hoja), la embiste y la hoja se abre de golpe en la bisagra (DoorBreak 12; 0 → 98° en 4 cuadros, rebota a 84°); las manos se sueltan, cae al frente por el marco y acaba en Pose_Caza (sigue cazando). Los pies no se mueven.",
+   "revision_vermin": {
+    "piso_malla": {
+     "Vermin_Bata": [
+      0.343,
+      16
+     ],
+     "Vermin_Relleno": [
+      0.659,
+      14
+     ],
+     "Vermin_Piernas": [
+      -0.166,
+      14
+     ],
+     "Vermin_ManoIzq": [
+      0.293,
+      12
+     ],
+     "Vermin_ManoDer": [
+      0.307,
+      12
+     ],
+     "Vermin_Cuello": [
+      0.939,
+      12
+     ],
+     "Vermin_Colas": [
+      0.023,
+      14
+     ],
+     "Vermin_Ojos": [
+      1.146,
+      12
+     ]
+    },
+    "piso_de_mas": 0.0,
+    "vertices_tras_la_puerta": {
+     "Vermin_Colas": 14
+    },
+    "cierre_grados": 0.0,
+    "cierre_loc": 0.0,
+    "pies_se_mueven": {
+     "tobillo_L": 0.011,
+     "tobillo_R": 0.011
+    },
+    "alcance_max": {
+     "pierna_L": 1.005,
+     "pierna_R": 0.973,
+     "brazo_L": 0.882,
+     "brazo_R": 0.882
+    },
+    "cuadros_sin_alcanzar": {
+     "pierna_L": 3
+    },
+    "colgantes_detenidos_en_piso": 83,
+    "colgantes_subidos_studs": {
+     "HemTailF3": 0.177
+    },
+    "utileria": [
+     "Puerta_PuertaRota_Dintel",
+     "Puerta_PuertaRota_Hoja",
+     "Puerta_PuertaRota_MarcoDer",
+     "Puerta_PuertaRota_MarcoIzq"
+    ]
+   }
+  },
+  "Rata_Corre": {
+   "rig": "Rata_Rig",
+   "cuadros": 10,
+   "segundos": 0.333,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 8.0,
+   "marcas": [
+    [
+     0,
+     "Scurry",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.001,
+    "cuadro_mas_bajo": 8,
+    "cierre_grados": 0.0
+   },
+   "nota": "La rata suelta corre a saltos (galope): un tranco por loop = 2.67 studs (velocidad·L/30); velocidad de diseño 8 studs/s (PROPUESTA). Como es tan chica, a 30 fps no le caben los pasos de verdad: el cuerpo brinca (0.05) y se estira y se encoge, las patas van en tijera y la cola ondula hacia atrás. Scurry (0).",
+   "revision_vermin": {
+    "piso": -0.001,
+    "cuadro_mas_bajo": 8,
+    "cierre_grados": 0.0
+   }
+  },
+  "Rata_Asoma": {
+   "rig": "Rata_Rig",
+   "cuadros": 60,
+   "segundos": 2.0,
+   "loop": true,
+   "prioridad": "Idle",
+   "velocidad": null,
+   "marcas": [],
+   "revision": {
+    "piso": 0.002,
+    "cuadro_mas_bajo": 22,
+    "cierre_grados": 0.0
+   },
+   "nota": "Se asoma parada en las patas de atrás (Pose_RataAsoma): olfatea a tironcitos rápidos (la cabeza cada 6 cuadros), ladea la cabeza a un lado y al otro (12 y 38, con un tirón), baja y sube el cuerpo un poco; las patas de enfrente tantean y la cola barre el piso. Las patas de atrás no se mueven.",
+   "revision_vermin": {
+    "piso": 0.002,
+    "cuadro_mas_bajo": 22,
+    "cierre_grados": 0.0,
+    "patas_de_atras_se_mueven": 0.0071
+   }
+  },
+  "Rata_Chilla": {
+   "rig": "Rata_Rig",
+   "cuadros": 36,
+   "segundos": 1.2,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     6,
+     "Ojos",
+     "On"
+    ],
+    [
+     9,
+     "Squeak",
+     ""
+    ],
+    [
+     22,
+     "Squeak",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.001,
+    "cuadro_mas_bajo": 13,
+    "cierre_grados": 0.0
+   },
+   "nota": "Te ve: de cuatro patas (Pose_RataCorre) se para de golpe en dos (Pose_RataAsoma en 6 cuadros, se congela uno), se le encienden los ojos (Ojos 6: RataOjos a Neon en Roblox), echa la cabeza atrás, abre las patas de enfrente y chilla temblando (Squeak 9 y 22); se queda parada mirándote (termina en Pose_RataAsoma).",
+   "revision_vermin": {
+    "piso": 0.001,
+    "cuadro_mas_bajo": 13
+   }
+  }
+ }
+}
