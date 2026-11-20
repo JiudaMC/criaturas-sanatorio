@@ -80,6 +80,41 @@ export function crearVisor(caja, avisos) {
   for (const z of [-18, -4, 10]) { const t = new THREE.Mesh(new THREE.BoxGeometry(0.8, 0.15, 4.5), tubo); t.position.set(0, 21, z); pasillo.add(t); tubos.push(t); }
   escena.add(pasillo);
 
+
+  // ---------------- polvo en el aire ----------------
+  const NP = 300;
+  const dpos = new Float32Array(NP * 3), dvel = new Float32Array(NP * 3);
+  for (let i = 0; i < NP; i++) {
+    dpos[i * 3] = (Math.random() - 0.5) * 30; dpos[i * 3 + 1] = Math.random() * 20; dpos[i * 3 + 2] = -22 + Math.random() * 44;
+    dvel[i * 3] = (Math.random() - 0.5) * 0.35; dvel[i * 3 + 1] = (Math.random() - 0.35) * 0.22; dvel[i * 3 + 2] = (Math.random() - 0.5) * 0.35;
+  }
+  const dgeo = new THREE.BufferGeometry();
+  dgeo.setAttribute("position", new THREE.BufferAttribute(dpos, 3));
+  const puntoTex = lienzo(32, 32, (g) => {
+    const r = g.createRadialGradient(16, 16, 0, 16, 16, 16);
+    r.addColorStop(0, "rgba(255,255,255,1)"); r.addColorStop(0.35, "rgba(255,255,255,.55)"); r.addColorStop(1, "rgba(255,255,255,0)");
+    g.fillStyle = r; g.fillRect(0, 0, 32, 32);
+  });
+  puntoTex.wrapS = puntoTex.wrapT = THREE.ClampToEdgeWrapping;
+  const dmat = new THREE.PointsMaterial({ color: 0xe8dfc8, size: 0.24, map: puntoTex, transparent: true, opacity: 0.5, depthWrite: false, sizeAttenuation: true });
+  const polvo = new THREE.Points(dgeo, dmat);
+  polvo.frustumCulled = false;
+  escena.add(polvo);
+  // jirones de niebla baja: planos suaves que se arrastran por el piso
+  const nieblaTex = lienzo(128, 128, (g) => {
+    const r = g.createRadialGradient(64, 64, 4, 64, 64, 64);
+    r.addColorStop(0, "rgba(200,210,200,.55)"); r.addColorStop(1, "rgba(200,210,200,0)");
+    g.fillStyle = r; g.fillRect(0, 0, 128, 128);
+  });
+  nieblaTex.wrapS = nieblaTex.wrapT = THREE.ClampToEdgeWrapping;
+  const jirones = [];
+  for (let i = 0; i < 9; i++) {
+    const m = new THREE.Mesh(new THREE.PlaneGeometry(14, 14), new THREE.MeshBasicMaterial({ map: nieblaTex, transparent: true, opacity: 0.22, depthWrite: false, fog: false }));
+    m.rotation.x = -Math.PI / 2; m.position.set((Math.random() - 0.5) * 24, 0.5 + Math.random() * 1.4, -20 + Math.random() * 36);
+    m.userData.v = (Math.random() - 0.5) * 0.5; m.userData.fase = Math.random() * 6;
+    escena.add(m); jirones.push(m);
+  }
+
   // ---------------- luces ----------------
   const cielo = new THREE.HemisphereLight(0xdde9e3, 0x2a2620, 0.7);
   const llave = new THREE.DirectionalLight(0xfff0dc, 2.6);
@@ -109,8 +144,30 @@ export function crearVisor(caja, avisos) {
     tubo.emissiveIntensity = si ? 0.15 : 2.2;
     linterna.intensity = si ? 520 * factorLinterna : 0;
     const f = si ? new THREE.Color(0x070908) : FONDO;
-    escena.background = f; escena.fog.color = f; escena.fog.near = si ? 22 : 45; escena.fog.far = si ? 90 : 120;
+    escena.background = f; escena.fog.color = f; escena.fog.near = si ? 10 : 40; escena.fog.far = si ? 66 : 115;
+    dmat.opacity = si ? 0.8 : 0.4; for (const j of jirones) j.material.opacity = si ? 0.3 : 0.14;
     renderer.toneMappingExposure = si ? 1.4 : 1.12;
+    if (enVitrina) aplicaVitrina();
+  }
+
+  // ---------------- fondo "vitrina": azul negro, sin pasillo ni filtro, la criatura más cerca ----------------
+  let enVitrina = false;
+  const plataforma = new THREE.Mesh(new THREE.CircleGeometry(16, 64), new THREE.MeshStandardMaterial({ color: 0x05080f, roughness: 1, metalness: 0 }));
+  plataforma.rotation.x = -Math.PI / 2; plataforma.position.y = 0.02; plataforma.receiveShadow = true; plataforma.visible = false;
+  escena.add(plataforma);
+  function aplicaVitrina() {
+    const f = new THREE.Color(0x070d18);
+    escena.background = f; escena.fog.color = f; escena.fog.near = 60; escena.fog.far = 200;
+    pasillo.visible = false; suelo.visible = false; plataforma.visible = true;
+    polvo.visible = false; for (const j of jirones) j.visible = false;
+    cielo.intensity = 0.55; llave.intensity = 2.6; contorno.intensity = 3.4; relleno.intensity = 32; techo1.intensity = 0; emergencia.intensity = 0; linterna.intensity = 0;
+    tubo.emissiveIntensity = 0.1; renderer.toneMappingExposure = 1.25;
+  }
+  function vitrina(si) {
+    enVitrina = si;
+    if (si) aplicaVitrina();
+    else { pasillo.visible = true; suelo.visible = true; plataforma.visible = false; polvo.visible = true; for (const j of jirones) j.visible = true; noche(esNoche); }
+    encuadre(true);
   }
 
   // luz propia de las criaturas: el farol, la vela y la luz del pecho del Cabrero (y de su evolución) alumbran de verdad
@@ -240,7 +297,7 @@ export function crearVisor(caja, avisos) {
     const piso = Math.max(0, b.min.y);
     const h = Math.min(32, t.y), ancho = Math.min(40, Math.max(t.x, t.z));
     const vf = THREE.MathUtils.degToRad(camara.fov) / 2, hf = Math.atan(Math.tan(vf) * camara.aspect);
-    const dist = Math.max((h * 0.72) / Math.tan(vf), (ancho * 0.72 + 2.0) / Math.tan(hf)) * (extra.lejos || 1) + ancho * 0.35;
+    const dist = Math.max((h * 0.72) / Math.tan(vf), (ancho * 0.72 + 2.0) / Math.tan(hf)) * (extra.lejos || 1) * (enVitrina ? 0.9 : 1) + ancho * 0.35;
     vObjetivo.set(c.x, Math.max(0.8, piso + h * 0.5), c.z);
     const alto = Math.max(1.4, piso + h * (extra.alto || 0.62));
     // si la utilería (un muro, el jugador, el pozo) tapa a la criatura, la cámara le da la vuelta
@@ -332,13 +389,24 @@ export function crearVisor(caja, avisos) {
       camara.position.lerp(vPos, 0.09); controles.target.lerp(vObjetivo, 0.12);
       if (camara.position.distanceTo(vPos) < 0.05) vuelo = 0;
     }
+    if (visible) {
+      const pa = dgeo.attributes.position.array;
+      for (let i = 0; i < NP; i++) {
+        pa[i * 3] += dvel[i * 3] * dt; pa[i * 3 + 1] += dvel[i * 3 + 1] * dt; pa[i * 3 + 2] += dvel[i * 3 + 2] * dt;
+        if (pa[i * 3 + 1] > 20) pa[i * 3 + 1] = 0; if (pa[i * 3 + 1] < 0) pa[i * 3 + 1] = 20;
+        if (pa[i * 3] > 15) pa[i * 3] = -15; if (pa[i * 3] < -15) pa[i * 3] = 15;
+        if (pa[i * 3 + 2] > 22) pa[i * 3 + 2] = -22; if (pa[i * 3 + 2] < -22) pa[i * 3 + 2] = 22;
+      }
+      dgeo.attributes.position.needsUpdate = true;
+      for (const j of jirones) { j.position.x += j.userData.v * dt; if (j.position.x > 14) j.position.x = -14; if (j.position.x < -14) j.position.x = 14; j.position.y = 0.7 + Math.sin(reloj.elapsedTime * 0.3 + j.userData.fase) * 0.25; }
+    }
     if (esNoche) for (const t of tubos) t.material.emissiveIntensity = Math.random() < 0.04 ? 0.6 : 0.08;
     controles.update();
     renderer.render(escena, camara);
   });
 
   return {
-    mostrar, tocar: (c) => tocar(c), noche,
+    mostrar, tocar: (c) => tocar(c), noche, vitrina,
     girar(si) { controles.autoRotate = si; },
     get noche_() { return esNoche; },
   };

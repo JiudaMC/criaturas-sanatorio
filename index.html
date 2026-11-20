@@ -58,6 +58,21 @@ h1 { margin: 0; font-family: var(--titulo); font-weight: 400; font-size: clamp(3
 .vhs span { position: absolute; bottom: 12px; right: 14px; font-family: var(--mono); font-size: 12px; color: #e9e3d2; text-shadow: 0 0 4px #000; }
 .visor.noche canvas { filter: saturate(.6) contrast(1.12); }
 
+
+/* VHS de verdad: grano que se mueve, banda de tracking y cortes */
+.vhs canvas.grano { position: absolute; inset: 0; width: 100%; height: 100%; image-rendering: pixelated; mix-blend-mode: overlay; opacity: .2; }
+.vhs .rollo { position: absolute; left: 0; right: 0; height: 22%; top: -25%; background: linear-gradient(to bottom, transparent, rgba(255,255,255,.07) 45%, rgba(255,255,255,.1) 50%, transparent); animation: rollo 7s linear infinite; }
+@keyframes rollo { to { top: 110%; } }
+.vhs .corte { position: absolute; left: 0; right: 0; height: 9%; background: rgba(230,230,255,.12); mix-blend-mode: screen; opacity: 0; }
+.visor.glitch .vhs .corte { opacity: 1; animation: corte .34s steps(4) 1; }
+@keyframes corte { 0% { top: 20%; } 25% { top: 48%; } 50% { top: 33%; } 75% { top: 70%; } 100% { top: 55%; } }
+.visor.glitch canvas:not(.grano) { transform: translateX(5px) skewX(-1.5deg); filter: saturate(.3) contrast(1.5) brightness(1.15); }
+.visor.noche canvas:not(.grano) { transition: none; }
+@media (prefers-reduced-motion: reduce) { .vhs .rollo { animation: none; } .visor.glitch canvas:not(.grano) { transform: none; } }
+
+.visor.vitrina { background: #070d18; }
+.visor.vitrina .vhs { display: none; }
+.visor.vitrina canvas:not(.grano) { filter: none !important; transform: none !important; }
 /* animaciones */
 .anims { padding-top: 14px; display: grid; gap: 8px; }
 .etq { margin: 0; font-family: var(--mono); font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--tenue); }
@@ -125,11 +140,13 @@ footer { margin: 34px 0 0; padding: 18px 0 calc(28px + env(safe-area-inset-botto
   <div class="tira" id="tira" role="group" aria-label="Criaturas"></div>
 
   <section class="visor" id="visor" aria-label="Visor 3D de la criatura">
-    <div class="vhs"><span id="reloj">OCT 13 1987 · 03:41:07</span></div>
+    <div class="vhs"><canvas class="grano" id="grano" width="160" height="100"></canvas><div class="rollo"></div><div class="corte"></div><span id="reloj">OCT 13 1987 · 03:41:07</span></div>
     <div class="sobre nombre"><h2 id="nom">…</h2><p id="alias"></p></div>
     <div class="mandos">
       <button class="mando" type="button" id="b-noche" aria-pressed="false">NOCHE</button>
       <button class="mando" type="button" id="b-girar" aria-pressed="false">GIRAR</button>
+      <button class="mando" type="button" id="b-fondo" aria-pressed="false">FONDO</button>
+      <button class="mando" type="button" id="b-pres" aria-pressed="false">PRESENTAR</button>
     </div>
     <p class="sobre pista" id="pista">Arrastra para girar · pellizca para acercar</p>
     <div class="carga" id="carga"><div><span id="carga-txt">Abriendo el expediente…</span><i><b id="carga-barra"></b></i></div></div>
@@ -150,7 +167,7 @@ footer { margin: 34px 0 0; padding: 18px 0 calc(28px + env(safe-area-inset-botto
 
   <section class="roles" aria-label="Los 5 roles">
     <p class="etq">Los 5 roles <span class="proto">PROTOTIPO</span></p>
-    <h2 class="tit">Cinco trabajos, un solo equipo</h2>
+    <h2 class="tit">5 trabajos, 6 jugadores, un equipo</h2>
     <p class="aviso-proto">Esta parte todavía es un prototipo: está en diseño y aún no está armada en el juego. Lo que sí está armado son las criaturas de arriba.</p>
     <p class="intro">Se juega en cooperativo, de 1 a 6 jugadores. Cada quien tiene un lugar y una tarea, y nadie puede sobrevivir solo. Cada rol lleva su herramienta en el brazo de la mochila, así se ve bien con cualquier skin.</p>
     <div class="roles-lista">
@@ -319,7 +336,14 @@ function elegir(id) {
 const ojo = new IntersectionObserver((es) => { for (const e of es) { const v = e.target; if (e.isIntersecting) v.play().catch(() => {}); else v.pause(); } }, { threshold: 0.4 });
 function verVideo(v) { ojo.observe(v); }
 
+$("b-fondo").addEventListener("click", (e) => {
+  const si = e.currentTarget.getAttribute("aria-pressed") !== "true";
+  e.currentTarget.setAttribute("aria-pressed", String(si));
+  visorEl.classList.toggle("vitrina", si);
+  visor && visor.vitrina(si);
+});
 $("b-noche").addEventListener("click", (e) => {
+  if (visorEl.classList.contains("vitrina")) $("b-fondo").click();
   const si = e.currentTarget.getAttribute("aria-pressed") !== "true";
   e.currentTarget.setAttribute("aria-pressed", String(si)); visorEl.classList.toggle("noche", si); visor && visor.noche(si);
 });
@@ -327,6 +351,58 @@ $("b-girar").addEventListener("click", (e) => {
   const si = e.currentTarget.getAttribute("aria-pressed") !== "true";
   e.currentTarget.setAttribute("aria-pressed", String(si)); visor && visor.girar(si);
 });
+
+
+// ---- VHS de verdad: grano animado y cortes de cinta (solo de noche y solo si se ve) ----
+const grano = $("grano"), gctx = grano.getContext("2d"), gimg = gctx.createImageData(160, 100);
+let visorVisible = true;
+new IntersectionObserver(([e]) => { visorVisible = e.isIntersecting; }).observe(visorEl);
+setInterval(() => {
+  if (!visorVisible || !visorEl.classList.contains("noche") || document.hidden) return;
+  const d = gimg.data;
+  for (let i = 0; i < d.length; i += 4) { const v = 128 + ((Math.random() - 0.5) * 110) | 0; d[i] = d[i + 1] = d[i + 2] = v; d[i + 3] = 255; }
+  gctx.putImageData(gimg, 0, 0);
+}, 80);
+(function cortes() {
+  setTimeout(() => {
+    if (visorVisible && visorEl.classList.contains("noche") && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      visorEl.classList.add("glitch"); setTimeout(() => visorEl.classList.remove("glitch"), 340);
+    }
+    cortes();
+  }, 3000 + Math.random() * 6000);
+})();
+
+// ---- modo presentación: recorre las animaciones de cada criatura y pasa a la siguiente ----
+let pres = null;
+function pararPres() {
+  if (!pres) return;
+  clearTimeout(pres.t); pres = null;
+  $("b-pres").setAttribute("aria-pressed", "false"); $("b-pres").textContent = "PRESENTAR";
+  $("b-girar").setAttribute("aria-pressed", "false"); visor && visor.girar(false);
+}
+function pasoPres() {
+  if (!pres || !visor) return;
+  const c = actual;
+  if (pres.i >= c.clips.length) {
+    const sig = CRIATURAS[(CRIATURAS.indexOf(c) + 1) % CRIATURAS.length];
+    pres.i = 1; pres.cambio = true; location.hash = sig.id;
+    pres.t = setTimeout(pasoPres, 6500); return;
+  }
+  visor.tocar(c.clips[pres.i][0]); pres.i++;
+  pres.t = setTimeout(pasoPres, 4500);
+}
+$("b-pres").addEventListener("click", () => {
+  if (pres) { pararPres(); return; }
+  pres = { i: 1, t: null, cambio: false };
+  $("b-pres").setAttribute("aria-pressed", "true"); $("b-pres").textContent = "PARAR";
+  $("b-girar").setAttribute("aria-pressed", "true"); visor && visor.girar(true);
+  visor && actual && visor.tocar(actual.clips[0][0]);
+  pres.t = setTimeout(pasoPres, 4500);
+});
+// cualquier toque del usuario detiene la presentación
+visorEl.addEventListener("pointerdown", (e) => { if (!e.target.closest("#b-pres")) pararPres(); });
+$("anims").addEventListener("click", pararPres);
+$("tira").addEventListener("click", pararPres);
 
 // reloj de la cinta
 let s = 3 * 3600 + 41 * 60 + 7;
@@ -341,6 +417,7 @@ try {
 } catch (e) {
   carga.hidden = false; cargaTxt.textContent = "Este teléfono no pudo abrir el 3D. Abajo están los videos de cada criatura.";
 }
+if (new URLSearchParams(location.search).get("fondo") === "1") setTimeout(() => $("b-fondo").click(), 50);
 </script>
 
 </body></html>
