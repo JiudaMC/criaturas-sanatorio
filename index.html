@@ -146,7 +146,6 @@ footer { margin: 34px 0 0; padding: 18px 0 calc(28px + env(safe-area-inset-botto
       <button class="mando" type="button" id="b-noche" aria-pressed="false">NOCHE</button>
       <button class="mando" type="button" id="b-girar" aria-pressed="false">GIRAR</button>
       <button class="mando" type="button" id="b-fondo" aria-pressed="false">FONDO</button>
-      <button class="mando" type="button" id="b-pres" aria-pressed="false">PRESENTAR</button>
     </div>
     <p class="sobre pista" id="pista">Arrastra para girar · pellizca para acercar</p>
     <div class="carga" id="carga"><div><span id="carga-txt">Abriendo el expediente…</span><i><b id="carga-barra"></b></i></div></div>
@@ -372,37 +371,6 @@ setInterval(() => {
   }, 3000 + Math.random() * 6000);
 })();
 
-// ---- modo presentación: recorre las animaciones de cada criatura y pasa a la siguiente ----
-let pres = null;
-function pararPres() {
-  if (!pres) return;
-  clearTimeout(pres.t); pres = null;
-  $("b-pres").setAttribute("aria-pressed", "false"); $("b-pres").textContent = "PRESENTAR";
-  $("b-girar").setAttribute("aria-pressed", "false"); visor && visor.girar(false);
-}
-function pasoPres() {
-  if (!pres || !visor) return;
-  const c = actual;
-  if (pres.i >= c.clips.length) {
-    const sig = CRIATURAS[(CRIATURAS.indexOf(c) + 1) % CRIATURAS.length];
-    pres.i = 1; pres.cambio = true; location.hash = sig.id;
-    pres.t = setTimeout(pasoPres, 6500); return;
-  }
-  visor.tocar(c.clips[pres.i][0]); pres.i++;
-  pres.t = setTimeout(pasoPres, 4500);
-}
-$("b-pres").addEventListener("click", () => {
-  if (pres) { pararPres(); return; }
-  pres = { i: 1, t: null, cambio: false };
-  $("b-pres").setAttribute("aria-pressed", "true"); $("b-pres").textContent = "PARAR";
-  $("b-girar").setAttribute("aria-pressed", "true"); visor && visor.girar(true);
-  visor && actual && visor.tocar(actual.clips[0][0]);
-  pres.t = setTimeout(pasoPres, 4500);
-});
-// cualquier toque del usuario detiene la presentación
-visorEl.addEventListener("pointerdown", (e) => { if (!e.target.closest("#b-pres")) pararPres(); });
-$("anims").addEventListener("click", pararPres);
-$("tira").addEventListener("click", pararPres);
 
 // reloj de la cinta
 let s = 3 * 3600 + 41 * 60 + 7;
