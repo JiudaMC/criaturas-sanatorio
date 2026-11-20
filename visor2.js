@@ -152,7 +152,13 @@ export function crearVisor(caja, avisos) {
 
   // ---------------- fondo "vitrina": azul negro, sin pasillo ni filtro, la criatura más cerca ----------------
   let enVitrina = false;
-  const plataforma = new THREE.Mesh(new THREE.CircleGeometry(16, 64), new THREE.MeshStandardMaterial({ color: 0x05080f, roughness: 1, metalness: 0 }));
+  const bordeTex = lienzo(128, 128, (g) => {
+    const r = g.createRadialGradient(64, 64, 8, 64, 64, 64);
+    r.addColorStop(0, "#fff"); r.addColorStop(0.55, "#fff"); r.addColorStop(1, "#000");
+    g.fillStyle = r; g.fillRect(0, 0, 128, 128);
+  });
+  bordeTex.wrapS = bordeTex.wrapT = THREE.ClampToEdgeWrapping;
+  const plataforma = new THREE.Mesh(new THREE.CircleGeometry(40, 64), new THREE.MeshStandardMaterial({ color: 0x05080f, roughness: 1, metalness: 0, alphaMap: bordeTex, transparent: true, depthWrite: false }));
   plataforma.rotation.x = -Math.PI / 2; plataforma.position.y = 0.02; plataforma.receiveShadow = true; plataforma.visible = false;
   escena.add(plataforma);
   function aplicaVitrina() {
@@ -167,6 +173,7 @@ export function crearVisor(caja, avisos) {
     enVitrina = si;
     if (si) aplicaVitrina();
     else { pasillo.visible = true; suelo.visible = true; plataforma.visible = false; polvo.visible = true; for (const j of jirones) j.visible = true; noche(esNoche); }
+    if (modelo && tocando) for (const o of (modelo.util[tocando] || [])) o.visible = !(enVitrina && /Rayas/.test(o.name));
     encuadre(true);
   }
 
@@ -359,7 +366,7 @@ export function crearVisor(caja, avisos) {
     if (vieja && vieja !== nueva) vieja.crossFadeTo(nueva, 0.3, false);
     tocando = clip;
     for (const lista of Object.values(m.util)) for (const o of lista) o.visible = false;
-    for (const o of (m.util[clip] || [])) o.visible = true;
+    for (const o of (m.util[clip] || [])) o.visible = !(enVitrina && /Rayas/.test(o.name));
     avisos.clip(clip);
     encuadre(true);
     setTimeout(() => { if (tocando === clip) encuadre(true); }, 400);

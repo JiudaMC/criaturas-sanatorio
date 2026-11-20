@@ -147,6 +147,9 @@ export function construirHollow(camara) {
     pieza("brazo" + s, "torso", 0.95, 2.0, 0.95, 1.5 * s, 0, 0, colores.brazo);
     pieza("pierna" + s, "torso", 0.95, 2.0, 0.95, 0.5 * s, -2.0, 0, colores.pierna);
   }
+  // posición de reposo de cada pieza: poseCopia la recupera en cada cuadro (si no, el desarme se acumula y la copia queda rota)
+  const bases = {};
+  for (const [k, g] of Object.entries(piezas)) bases[k] = [g.position.x, g.position.y, g.position.z];
   // cara de estática
   const lienzo = document.createElement("canvas"); lienzo.width = lienzo.height = 32;
   const lc = lienzo.getContext("2d");
@@ -162,6 +165,7 @@ export function construirHollow(camara) {
   for (const k of Object.keys(piezas)) piezasDoble[k] = doble.getObjectByName(k);
 
   function poseCopia(P, t, tieso, deshace) {
+    for (const [k, g] of Object.entries(P)) { const b = bases[k]; if (b) { g.position.set(b[0], b[1], b[2]); g.rotation.set(0, 0, 0); } }
     const f = Math.floor(t * 6) / 6;
     const s = Math.sin(f * 5.5);
     P.torso.position.set(0, 4.0 + Math.abs(s) * 0.05, 0);

@@ -386,6 +386,10 @@ try {
   carga.hidden = false; cargaTxt.textContent = "Este teléfono no pudo abrir el 3D. Abajo están los videos de cada criatura.";
 }
 if (new URLSearchParams(location.search).get("fondo") === "1") setTimeout(() => $("b-fondo").click(), 50);
+{
+  const lista = (new URLSearchParams(location.search).get("clip") || "").split(",").filter(Boolean);
+  lista.forEach((c, k) => setTimeout(() => visor && visor.tocar(c), 6000 + k * 7000));
+}
 </script>
 
 </body></html>
