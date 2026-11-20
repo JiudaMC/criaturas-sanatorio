@@ -1,0 +1,450 @@
+{
+ "grupos": {
+  "bellwether": {
+   "archivo": "anim_bellwether.json",
+   "clips": [
+    "Bellwether_Acecho",
+    "Bellwether_Agachada",
+    "Bellwether_Aturdida",
+    "Bellwether_Carga",
+    "Bellwether_Caza",
+    "Bellwether_Cornada",
+    "Bellwether_Forcejeo",
+    "Bellwether_Prepara",
+    "Bellwether_PreparaEspera",
+    "Bellwether_PuertaRota",
+    "Bellwether_Quieto",
+    "Bellwether_Remate"
+   ],
+   "kb": 6478,
+   "utileria": {
+    "Bellwether_Forcejeo": [
+     "BW_Puerta_Forcejeo"
+    ],
+    "Bellwether_PuertaRota": [
+     "BW_Puerta_Rota"
+    ],
+    "Bellwether_Remate": [
+     "BW_R15_Head",
+     "BW_R15_LeftFoot",
+     "BW_R15_LeftHand",
+     "BW_R15_LeftLowerArm",
+     "BW_R15_LeftLowerLeg",
+     "BW_R15_LeftUpperArm",
+     "BW_R15_LeftUpperLeg",
+     "BW_R15_LowerTorso",
+     "BW_R15_RightFoot",
+     "BW_R15_RightHand",
+     "BW_R15_RightLowerArm",
+     "BW_R15_RightLowerLeg",
+     "BW_R15_RightUpperArm",
+     "BW_R15_RightUpperLeg",
+     "BW_R15_UpperTorso"
+    ],
+    "Bellwether_Acecho": [
+     "BWM_Rayas_Bellwether_Acecho"
+    ],
+    "Bellwether_Agachada": [
+     "BWM_Rayas_Bellwether_Agachada"
+    ],
+    "Bellwether_Caza": [
+     "BWM_Rayas_Bellwether_Caza"
+    ]
+   }
+  }
+ },
+ "clips": {
+  "Bellwether_Remate": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 84,
+   "segundos": 2.8,
+   "loop": false,
+   "prioridad": "Action3",
+   "velocidad": null,
+   "marcas": [
+    [
+     6,
+     "Hit",
+     ""
+    ],
+    [
+     9,
+     "Bell",
+     ""
+    ],
+    [
+     20,
+     "Land",
+     ""
+    ],
+    [
+     36,
+     "Pin",
+     ""
+    ],
+    [
+     57,
+     "Release",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.032,
+    "cuadro_mas_bajo": 78,
+    "cierre_grados": 0.0
+   },
+   "nota": "Empieza en Pose_Caza al mismo tiempo que Bellwether_Remate_R15 en el jugador (mismos cuadros: Hit 6, Land 20, Pin 36, Release 57) y termina igual a Pose_Acecho. El jugador sigue la tabla 'jugador' de Bellwether_Remate_R15.json (servidor): 0-6 de pie frente a los cuernos (10.2), 6-20 lo voltea y lo tumba de espaldas (9.3), 20-57 acostado bajo el cráneo, 57 lo suelta (queda caído). El modelo avanza ~2.6 studs sobre él (lomo) y recula al soltarlo; el root no se mueve."
+  },
+  "Bellwether_Prepara": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 30,
+   "segundos": 1.0,
+   "loop": false,
+   "prioridad": "Action2",
+   "velocidad": null,
+   "marcas": [
+    [
+     8,
+     "BellShake",
+     ""
+    ],
+    [
+     8,
+     "Scrape",
+     ""
+    ],
+    [
+     16,
+     "BellShake",
+     ""
+    ],
+    [
+     16,
+     "Scrape",
+     ""
+    ],
+    [
+     24,
+     "BellShake",
+     ""
+    ],
+    [
+     24,
+     "Scrape",
+     ""
+    ],
+    [
+     30,
+     "ChargeReady",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.001,
+    "cuadro_mas_bajo": 15,
+    "cierre_grados": 0.0
+   },
+   "nota": "Embestida = 'Prepara'. Estirarla a Config.Entity.Embestida.Preparacion (1 s = su largo). Rasca 3 veces con la delantera derecha (Scrape/BellShake en 8, 16, 24); ChargeReady en 30. Si el servidor tarda más, seguir con Bellwether_PreparaEspera (empieza igual que el cuadro 30)."
+  },
+  "Bellwether_PreparaEspera": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 30,
+   "segundos": 1.0,
+   "loop": true,
+   "prioridad": "Action2",
+   "velocidad": null,
+   "marcas": [
+    [
+     16,
+     "HoofStep",
+     "FR"
+    ]
+   ],
+   "revision": {
+    "piso": -0.005,
+    "cuadro_mas_bajo": 16,
+    "cierre_grados": 0.0
+   },
+   "nota": "La pose del cuadro 30 de Bellwether_Prepara, en loop: respira, tiembla y da un pisotón (HoofStep:FR 16)."
+  },
+  "Bellwether_Carga": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 24,
+   "segundos": 0.8,
+   "loop": true,
+   "prioridad": "Action2",
+   "velocidad": 45.0,
+   "marcas": [
+    [
+     0,
+     "HoofStep",
+     "HL"
+    ],
+    [
+     1,
+     "HoofStep",
+     "HR"
+    ],
+    [
+     5,
+     "HoofStep",
+     "FL"
+    ],
+    [
+     6,
+     "HoofStep",
+     "FR"
+    ],
+    [
+     12,
+     "HoofStep",
+     "HL"
+    ],
+    [
+     13,
+     "HoofStep",
+     "HR"
+    ],
+    [
+     17,
+     "HoofStep",
+     "FL"
+    ],
+    [
+     18,
+     "HoofStep",
+     "FR"
+    ]
+   ],
+   "revision": {
+    "piso": -0.016,
+    "cuadro_mas_bajo": 14,
+    "cierre_grados": 0.0
+   },
+   "nota": "Embestida = 'Carga'. Galope transverso, 2 trancos de 18 studs (15 × 1.2) = 36 studs por vuelta; velocidad de diseño 45 studs/s: AdjustSpeed(rapidez / 45). En su lugar."
+  },
+  "Bellwether_Quieto": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 120,
+   "segundos": 4.0,
+   "loop": true,
+   "prioridad": "Idle",
+   "velocidad": null,
+   "marcas": [
+    [
+     111,
+     "BellClank",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.005,
+    "cuadro_mas_bajo": 70,
+    "cierre_grados": 0.0
+   },
+   "nota": "De pie y quieto (4 s): respira pesado, pasa el peso de un lado al otro y rasca una vez con la delantera izquierda (55-84) sin moverla de su lugar; el Cabrero colgado se mece; un tirón del cuello hace sonar el cencerro (BellClank). Las otras tres pezuñas no se mueven."
+  },
+  "Bellwether_Acecho": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 42,
+   "segundos": 1.4,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 8.1429,
+   "marcas": [
+    [
+     0,
+     "HoofStep",
+     "HL"
+    ],
+    [
+     5,
+     "HoofStep",
+     "FR"
+    ],
+    [
+     16,
+     "BellClank",
+     ""
+    ],
+    [
+     21,
+     "HoofStep",
+     "HR"
+    ],
+    [
+     26,
+     "HoofStep",
+     "FL"
+    ]
+   ],
+   "revision": {
+    "piso": 0.005,
+    "cuadro_mas_bajo": 27,
+    "cierre_grados": 0.0
+   },
+   "nota": "11.4 studs por ciclo (velocidad 8.1429 studs/s × 42 cuadros / 30). En el juego: AdjustSpeed(rapidez / 8.1429). En su lugar (sin root motion); las pezuñas apoyadas se recorren hacia atrás a la velocidad de diseño. Pisa en diagonal: HL y FR, luego HR y FL (la delantera 0.8 rad después)."
+  },
+  "Bellwether_Caza": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 20,
+   "segundos": 0.667,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 22.5,
+   "marcas": [
+    [
+     0,
+     "HoofStep",
+     "HL"
+    ],
+    [
+     3,
+     "HoofStep",
+     "FR"
+    ],
+    [
+     10,
+     "HoofStep",
+     "HR"
+    ],
+    [
+     13,
+     "HoofStep",
+     "FL"
+    ]
+   ],
+   "revision": {
+    "piso": 0.004,
+    "cuadro_mas_bajo": 13,
+    "cierre_grados": 0.0
+   },
+   "nota": "15.0 studs por ciclo (velocidad 22.5000 studs/s × 20 cuadros / 30). En el juego: AdjustSpeed(rapidez / 22.5000). En su lugar (sin root motion); las pezuñas apoyadas se recorren hacia atrás a la velocidad de diseño. Pisa en diagonal: HL y FR, luego HR y FL (la delantera 0.8 rad después)."
+  },
+  "Bellwether_Agachada": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 45,
+   "segundos": 1.5,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 6.0,
+   "marcas": [
+    [
+     0,
+     "HoofStep",
+     "HL"
+    ],
+    [
+     6,
+     "HoofStep",
+     "FR"
+    ],
+    [
+     23,
+     "HoofStep",
+     "HR"
+    ],
+    [
+     28,
+     "HoofStep",
+     "FL"
+    ]
+   ],
+   "revision": {
+    "piso": 0.004,
+    "cuadro_mas_bajo": 29,
+    "cierre_grados": 0.0
+   },
+   "nota": "9.0 studs por ciclo (velocidad 6.0000 studs/s × 45 cuadros / 30). En el juego: AdjustSpeed(rapidez / 6.0000). En su lugar (sin root motion); las pezuñas apoyadas se recorren hacia atrás a la velocidad de diseño. Pisa en diagonal: HL y FR, luego HR y FL (la delantera 0.8 rad después)."
+  },
+  "Bellwether_Aturdida": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 90,
+   "segundos": 3.0,
+   "loop": false,
+   "prioridad": "Action3",
+   "velocidad": null,
+   "marcas": [
+    [
+     3,
+     "CrashImpact",
+     ""
+    ],
+    [
+     66,
+     "StunShake",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.005,
+    "cuadro_mas_bajo": 54,
+    "cierre_grados": 0.0
+   },
+   "nota": "Embestida = 'Aturdida' (3 s = Embestida.Aturdimiento: estirarla si cambia). CrashImpact 3, StunShake 66. Recula 1.5 studs, se tambalea a 0.7 Hz y vuelve a Pose_Caza en el origen."
+  },
+  "Bellwether_Cornada": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 29,
+   "segundos": 0.967,
+   "loop": false,
+   "prioridad": "Action2",
+   "velocidad": null,
+   "marcas": [
+    [
+     9,
+     "HornHit",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.011,
+    "cuadro_mas_bajo": 9,
+    "cierre_grados": 0.0
+   },
+   "nota": "Cornada (UltimoGolpe): HornHit en 9 = 0.30 s. Empieza y acaba en Pose_Caza."
+  },
+  "Bellwether_Forcejeo": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 34,
+   "segundos": 1.133,
+   "loop": true,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     9,
+     "DoorHit",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.005,
+    "cuadro_mas_bajo": 22,
+    "cierre_grados": 0.0
+   },
+   "nota": "Forcejeo (Forcejeo = true, a ≤ 4 studs/s): un golpe cada 1.13 s (34 cuadros; AdjustSpeed(34 / 33.6) si se quiere exacto 1.12), DoorHit en 9 = 0.30 s. El cuerpo va desplazado 2.26 studs atrás del root para que el cráneo toque una puerta a 6.90 studs."
+  },
+  "Bellwether_PuertaRota": {
+   "rig": "Bellwether_Rig",
+   "cuadros": 36,
+   "segundos": 1.2,
+   "loop": false,
+   "prioridad": "Action3",
+   "velocidad": null,
+   "marcas": [
+    [
+     19,
+     "DoorBreak",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.006,
+    "cuadro_mas_bajo": 12,
+    "cierre_grados": 0.0
+   },
+   "nota": "PuertaForzada: la cornada que rompe la puerta. Empieza en el cuadro 0 de Bellwether_Forcejeo, DoorBreak en 19 = 0.63 s, pasa por el marco y acaba en Pose_Caza en el origen."
+  }
+ }
+}

@@ -1,0 +1,662 @@
+{
+ "grupos": {
+  "inmate": {
+   "archivo": "anim_inmate.json",
+   "clips": [
+    "Inmate_Acoso",
+    "Inmate_Congela",
+    "Inmate_Corre",
+    "Inmate_CorrePared",
+    "Inmate_Quieto",
+    "Inmate_RemateB",
+    "Inmate_RemateC",
+    "Inmate_Retira"
+   ],
+   "kb": 11046,
+   "utileria": {
+    "Inmate_CorrePared": [
+     "Escena_CorrePared_Muro"
+    ],
+    "Inmate_RemateB": [
+     "Escena_RemateB_Jugador_Head",
+     "Escena_RemateB_Jugador_LeftArm",
+     "Escena_RemateB_Jugador_LeftLeg",
+     "Escena_RemateB_Jugador_RightArm",
+     "Escena_RemateB_Jugador_RightLeg",
+     "Escena_RemateB_Jugador_Torso"
+    ],
+    "Inmate_RemateC": [
+     "Escena_RemateC_Jugador_Head",
+     "Escena_RemateC_Jugador_LeftArm",
+     "Escena_RemateC_Jugador_LeftLeg",
+     "Escena_RemateC_Jugador_RightArm",
+     "Escena_RemateC_Jugador_RightLeg",
+     "Escena_RemateC_Jugador_Torso",
+     "Escena_RemateC_Muro"
+    ]
+   }
+  }
+ },
+ "clips": {
+  "Inmate_Quieto": {
+   "rig": "Inmate_Rig",
+   "cuadros": 120,
+   "segundos": 4.0,
+   "loop": true,
+   "prioridad": "Idle",
+   "velocidad": null,
+   "marcas": [
+    [
+     0,
+     "Breath",
+     ""
+    ],
+    [
+     60,
+     "Breath",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.008,
+    "tanque_min": -0.008,
+    "cruces": 0,
+    "mal": {
+     "piso": -0.007569253444671631,
+     "cruces": 0,
+     "cuadros_cruce": 0,
+     "tanque_piso": -0.007569253444671631,
+     "pierna_corta": 0,
+     "manguera_corta": 0
+    },
+    "manguera_saltos": [],
+    "cierre_grados": 0.0,
+    "cierre_studs": 0.0,
+    "cierre_hueso": "",
+    "escala_max": 3e-06
+   },
+   "utileria": [],
+   "nota": "De pie en Acecho sujetando la manguera, 4 s en loop: respira en la mascarilla dos veces (el pecho se infla y los hombros suben), la cabeza busca y se ladea escuchando y los dedos de la derecha se crispan; el tanque quieto en el piso."
+  },
+  "Inmate_Acoso": {
+   "rig": "Inmate_Rig",
+   "cuadros": 84,
+   "segundos": 2.8,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 2.2,
+   "marcas": [
+    [
+     0,
+     "Breath",
+     ""
+    ],
+    [
+     12,
+     "Step",
+     "L"
+    ],
+    [
+     33,
+     "Step",
+     "R"
+    ],
+    [
+     54,
+     "Step",
+     "L"
+    ],
+    [
+     75,
+     "Step",
+     "R"
+    ]
+   ],
+   "revision": {
+    "piso": -0.008,
+    "tanque_min": -0.008,
+    "cruces": 0,
+    "mal": {
+     "piso": -0.007569253444671631,
+     "cruces": 0,
+     "cuadros_cruce": 0,
+     "tanque_piso": -0.007569253444671631,
+     "pierna_corta": 0,
+     "manguera_corta": 0
+    },
+    "manguera_saltos": [
+     [
+      12,
+      2.05
+     ],
+     [
+      67,
+      1.96
+     ],
+     [
+      68,
+      0.76
+     ]
+    ],
+    "cierre_grados": 0.0,
+    "cierre_studs": 0.0,
+    "cierre_hueso": "",
+    "escala_max": 4e-06
+   },
+   "utileria": [],
+   "nota": "Te sigue caminando EN SU LUGAR (2 pasos dobles en 2.8 s): cojea arrastrando el pie derecho, jala la manguera con la izquierda, la derecha cuelga y se mece, respira una vez por loop y la cabeza busca; el tanque se arrastra y da tirones. Velocidad de diseño 2.2 studs/s: AdjustSpeed(rapidez / 2.2)."
+  },
+  "Inmate_Congela": {
+   "rig": "Inmate_Rig",
+   "cuadros": 40,
+   "segundos": 1.333,
+   "loop": true,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [],
+   "revision": {
+    "piso": -0.008,
+    "tanque_min": -0.008,
+    "cruces": 0,
+    "mal": {
+     "piso": -0.007569253444671631,
+     "cruces": 7,
+     "cuadros_cruce": 3,
+     "tanque_piso": -0.007569253444671631,
+     "pierna_corta": 0,
+     "manguera_corta": 0
+    },
+    "manguera_saltos": [],
+    "cierre_grados": 2.961,
+    "cierre_studs": 0.0031,
+    "cierre_hueso": "Hose1",
+    "escala_max": 5e-06
+   },
+   "utileria": [],
+   "nota": "Lo miras: se congela de golpe a media zancada (pie derecho adelante, el izquierdo de puntas), la cabeza más ladeada, y contiene la respiración; solo tiembla un poco (loop de 1.33 s; en el juego entra con un fundido muy corto desde Acoso)."
+  },
+  "Inmate_Retira": {
+   "rig": "Inmate_Rig",
+   "cuadros": 40,
+   "segundos": 1.333,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 4.0,
+   "marcas": [
+    [
+     0,
+     "Breath",
+     ""
+    ],
+    [
+     0,
+     "Step",
+     "L"
+    ],
+    [
+     10,
+     "Step",
+     "R"
+    ],
+    [
+     20,
+     "Step",
+     "L"
+    ],
+    [
+     30,
+     "Step",
+     "R"
+    ]
+   ],
+   "revision": {
+    "piso": -0.008,
+    "tanque_min": -0.008,
+    "cruces": 0,
+    "mal": {
+     "piso": -0.007569253444671631,
+     "cruces": 0,
+     "cuadros_cruce": 0,
+     "tanque_piso": -0.007569253444671631,
+     "pierna_corta": 0,
+     "manguera_corta": 0
+    },
+    "manguera_saltos": [],
+    "cierre_grados": 0.0,
+    "cierre_studs": 0.0,
+    "cierre_hueso": "",
+    "escala_max": 1e-06
+   },
+   "utileria": [],
+   "nota": "Se retira de reversa EN SU LUGAR (2 pasos dobles en 1.33 s), muy encorvado: pasos cortos e inseguros, el pie de atrás tantea de puntas, avanza a tirones (uno por paso) y no deja de mirarte; jala el tanque, que queda delante de él. Velocidad de diseño 4 studs/s: AdjustSpeed(rapidez / 4)."
+  },
+  "Inmate_Corre": {
+   "rig": "Inmate_Rig",
+   "cuadros": 75,
+   "segundos": 2.5,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 19.0,
+   "marcas": [
+    [
+     0,
+     "Breath",
+     ""
+    ],
+    [
+     3,
+     "Step",
+     "L"
+    ],
+    [
+     19,
+     "Breath",
+     ""
+    ],
+    [
+     19,
+     "Step",
+     "R"
+    ],
+    [
+     30,
+     "Step",
+     "L"
+    ],
+    [
+     38,
+     "Breath",
+     ""
+    ],
+    [
+     44,
+     "Step",
+     "R"
+    ],
+    [
+     55,
+     "Step",
+     "L"
+    ],
+    [
+     56,
+     "Breath",
+     ""
+    ],
+    [
+     69,
+     "Step",
+     "R"
+    ],
+    [
+     69,
+     "Stumble",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.01,
+    "tanque_min": -0.008,
+    "cruces": 0,
+    "mal": {
+     "piso": -0.010148803566905883,
+     "cruces": 0,
+     "cuadros_cruce": 0,
+     "tanque_piso": -0.007569253444671631,
+     "pierna_corta": 0,
+     "manguera_corta": 0
+    },
+    "cierre_grados": 0.119,
+    "cierre_studs": 0.0012,
+    "cierre_hueso": "Foot_L",
+    "escala_max": 1e-06
+   },
+   "utileria": [],
+   "nota": "El desbocado (D) EN SU LUGAR, 2.5 s en loop (3 zancadas dobles): erguido, zancadas enormes y desiguales que botan, los brazos sueltos como trapos girando a destiempo, la cabeza se bambolea y vuelve a mirarte y una vez por vuelta casi se va de boca; la manguera y el tanque rebotan detrás. Velocidad de diseño 19 studs/s (Config.ChaseSpeed.Testigo): AdjustSpeed(rapidez / 19)."
+  },
+  "Inmate_CorrePared": {
+   "rig": "Inmate_Rig",
+   "cuadros": 75,
+   "segundos": 2.5,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 19.0,
+   "marcas": [
+    [
+     0,
+     "Breath",
+     ""
+    ],
+    [
+     3,
+     "Step",
+     "L"
+    ],
+    [
+     18,
+     "Step",
+     "R"
+    ],
+    [
+     18,
+     "WallPush",
+     "L"
+    ],
+    [
+     19,
+     "Breath",
+     ""
+    ],
+    [
+     30,
+     "Step",
+     "L"
+    ],
+    [
+     38,
+     "Breath",
+     ""
+    ],
+    [
+     42,
+     "Step",
+     "R"
+    ],
+    [
+     54,
+     "Step",
+     "L"
+    ],
+    [
+     56,
+     "Breath",
+     ""
+    ],
+    [
+     67,
+     "Step",
+     "R"
+    ],
+    [
+     67,
+     "Stumble",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.008,
+    "tanque_min": -0.008,
+    "cruces": 0,
+    "mal": {
+     "piso": -0.008347966421555525,
+     "cruces": 0,
+     "cuadros_cruce": 0,
+     "tanque_piso": -0.007569253444671631,
+     "pierna_corta": 0,
+     "manguera_corta": 0
+    },
+    "mano_pared": [
+     0.0147,
+     0.0213,
+     8
+    ],
+    "empujon": [
+     0.61,
+     0.87
+    ],
+    "pared_x_modelo": 7.0588,
+    "cierre_grados": 15.195,
+    "cierre_studs": 0.0051,
+    "cierre_hueso": "Tank",
+    "escala_max": 1e-06
+   },
+   "utileria": [
+    "Escena_CorrePared_Muro"
+   ],
+   "nota": "La D2 EN SU LUGAR, 2.5 s en loop: corre desbocado y una vez por vuelta se avienta con la mano izquierda contra la pared que lleva a su izquierda (empujón: acelera y luego vuelve a 19 studs/s de promedio); la pared (Escena_CorrePared_Muro) pasa hacia atrás a su velocidad. Velocidad de diseño 19 studs/s."
+  },
+  "Inmate_RemateB": {
+   "rig": "Inmate_Rig",
+   "cuadros": 123,
+   "segundos": 4.1,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     5,
+     "Step",
+     "L"
+    ],
+    [
+     19,
+     "Step",
+     "R"
+    ],
+    [
+     21,
+     "Grab",
+     ""
+    ],
+    [
+     28,
+     "Slam",
+     ""
+    ],
+    [
+     32,
+     "Step",
+     "L"
+    ],
+    [
+     45,
+     "Step",
+     "R"
+    ],
+    [
+     55,
+     "Step",
+     "R"
+    ],
+    [
+     56,
+     "Slam",
+     ""
+    ],
+    [
+     63,
+     "Release",
+     "R"
+    ],
+    [
+     69,
+     "Slam",
+     ""
+    ],
+    [
+     73,
+     "Step",
+     "L"
+    ],
+    [
+     93,
+     "Retreat",
+     ""
+    ],
+    [
+     101,
+     "Step",
+     "R"
+    ],
+    [
+     108,
+     "Step",
+     "L"
+    ],
+    [
+     115,
+     "Step",
+     "R"
+    ],
+    [
+     122,
+     "Step",
+     "L"
+    ]
+   ],
+   "revision": {
+    "piso": -0.027,
+    "tanque_min": -0.008,
+    "cruces": 136,
+    "mal": {
+     "piso": -0.026746943796836842,
+     "cruces": 136,
+     "cuadros_cruce": 72,
+     "tanque_piso": -0.007569253444671631,
+     "pierna_corta": 0,
+     "manguera_corta": 0
+    },
+    "hueco_mano_max": 0.511,
+    "ancla_studs": [
+     0.0,
+     26.7
+    ],
+    "escala_max": 4e-06
+   },
+   "utileria": [
+    "Escena_RemateB_Jugador_Head",
+    "Escena_RemateB_Jugador_LeftArm",
+    "Escena_RemateB_Jugador_LeftLeg",
+    "Escena_RemateB_Jugador_RightArm",
+    "Escena_RemateB_Jugador_RightLeg",
+    "Escena_RemateB_Jugador_Torso"
+   ],
+   "nota": "Remate B (del tobillo), saliendo del desbocado: corre, a los 0.7 s un brazo largo agarra el tobillo del jugador que huye, cae de boca, lo arrastra, lo alza de cabeza en un arco y lo azota DE CABEZA contra el piso a su derecha (la cabeza pega primero en el cuadro 56 y rebota); el cuerpo cae detrás (69) y queda boca abajo con la cabeza en el piso; se queda sobre él respirando y se va de reversa. Root lleva el avance y el giro (origen = donde lo alcanza)."
+  },
+  "Inmate_RemateC": {
+   "rig": "Inmate_Rig",
+   "cuadros": 129,
+   "segundos": 4.3,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     5,
+     "Step",
+     "L"
+    ],
+    [
+     19,
+     "Step",
+     "R"
+    ],
+    [
+     21,
+     "Grab",
+     ""
+    ],
+    [
+     29,
+     "Slam",
+     ""
+    ],
+    [
+     32,
+     "Step",
+     "L"
+    ],
+    [
+     40,
+     "Step",
+     "R"
+    ],
+    [
+     46,
+     "Breath",
+     ""
+    ],
+    [
+     46,
+     "Step",
+     "L"
+    ],
+    [
+     73,
+     "Release",
+     "R"
+    ],
+    [
+     81,
+     "Release",
+     "L"
+    ],
+    [
+     82,
+     "Step",
+     "R"
+    ],
+    [
+     85,
+     "Slam",
+     ""
+    ],
+    [
+     97,
+     "Step",
+     "L"
+    ],
+    [
+     104,
+     "Retreat",
+     ""
+    ],
+    [
+     112,
+     "Step",
+     "R"
+    ],
+    [
+     119,
+     "Step",
+     "L"
+    ],
+    [
+     126,
+     "Step",
+     "R"
+    ]
+   ],
+   "revision": {
+    "piso": -0.022,
+    "tanque_min": -0.008,
+    "cruces": 349,
+    "mal": {
+     "piso": -0.026746943796836842,
+     "cruces": 485,
+     "cuadros_cruce": 174,
+     "tanque_piso": -0.007569253444671631,
+     "pierna_corta": 0,
+     "manguera_corta": 0
+    },
+    "hueco_mano_max": 0.0,
+    "pared_x_modelo": 7.0588,
+    "ancla_studs": [
+     0.0,
+     26.7
+    ],
+    "escala_max": 4.6e-05
+   },
+   "utileria": [
+    "Escena_RemateC_Jugador_Head",
+    "Escena_RemateC_Jugador_LeftArm",
+    "Escena_RemateC_Jugador_LeftLeg",
+    "Escena_RemateC_Jugador_RightArm",
+    "Escena_RemateC_Jugador_RightLeg",
+    "Escena_RemateC_Jugador_Torso",
+    "Escena_RemateC_Muro"
+   ],
+   "nota": "Remate C (contra la pared), saliendo del desbocado: lo agarra del hombro por detrás, lo estrella de frente contra la pared (Escena_RemateC_Muro), lo sube con un brazo, le respira en la oreja ladeando la cabeza a tirones mientras la otra mano se acerca a su nuca sin tocarlo, lo deja caer de un empujón y se va de reversa. Root lleva el avance y el giro (origen = donde lo alcanza)."
+  }
+ }
+}

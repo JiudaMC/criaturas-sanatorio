@@ -1,0 +1,1271 @@
+{
+ "grupos": {
+  "choir": {
+   "archivo": "anim_choir.json",
+   "clips": [
+    "Choir_ACaza",
+    "Choir_Acecho",
+    "Choir_AcechoQuieto",
+    "Choir_DeCaza",
+    "Choir_Puerta",
+    "Choir_Relevo_A",
+    "Choir_Relevo_A_B",
+    "Choir_Relevo_A_C",
+    "Choir_Relevo_B",
+    "Choir_Relevo_B_A",
+    "Choir_Relevo_B_C",
+    "Choir_Relevo_C",
+    "Choir_Relevo_C_A",
+    "Choir_Relevo_C_B",
+    "Choir_Remate",
+    "Choir_Zarpazo",
+    "Choir_Zarpazo_A",
+    "Choir_Zarpazo_B",
+    "Choir_Zarpazo_C"
+   ],
+   "kb": 10553
+  },
+  "mute": {
+   "archivo": "anim_mute.json",
+   "clips": [
+    "Mute_Caza",
+    "Mute_Reposo"
+   ],
+   "kb": 2088
+  },
+  "blind": {
+   "archivo": "anim_blind.json",
+   "clips": [
+    "Blind_Caza",
+    "Blind_Reposo"
+   ],
+   "kb": 2087
+  },
+  "deaf": {
+   "archivo": "anim_deaf.json",
+   "clips": [
+    "Deaf_Caza",
+    "Deaf_Reposo"
+   ],
+   "kb": 2111
+  }
+ },
+ "clips": {
+  "Choir_Acecho": {
+   "rig": "Choir_Rig",
+   "cuadros": 360,
+   "segundos": 12.0,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 8.0,
+   "marcas": [
+    [
+     2,
+     "Step",
+     ""
+    ],
+    [
+     24,
+     "Step",
+     ""
+    ],
+    [
+     31,
+     "Scrape",
+     ""
+    ],
+    [
+     42,
+     "Step",
+     ""
+    ],
+    [
+     64,
+     "Step",
+     ""
+    ],
+    [
+     71,
+     "Scrape",
+     ""
+    ],
+    [
+     82,
+     "Step",
+     ""
+    ],
+    [
+     104,
+     "Step",
+     ""
+    ],
+    [
+     111,
+     "Scrape",
+     ""
+    ],
+    [
+     122,
+     "Step",
+     ""
+    ],
+    [
+     144,
+     "Step",
+     ""
+    ],
+    [
+     151,
+     "Scrape",
+     ""
+    ],
+    [
+     162,
+     "Step",
+     ""
+    ],
+    [
+     184,
+     "Step",
+     ""
+    ],
+    [
+     191,
+     "Scrape",
+     ""
+    ],
+    [
+     202,
+     "Step",
+     ""
+    ],
+    [
+     224,
+     "Step",
+     ""
+    ],
+    [
+     231,
+     "Scrape",
+     ""
+    ],
+    [
+     242,
+     "Step",
+     ""
+    ],
+    [
+     264,
+     "Step",
+     ""
+    ],
+    [
+     271,
+     "Scrape",
+     ""
+    ],
+    [
+     282,
+     "Step",
+     ""
+    ],
+    [
+     304,
+     "Step",
+     ""
+    ],
+    [
+     311,
+     "Scrape",
+     ""
+    ],
+    [
+     322,
+     "Step",
+     ""
+    ],
+    [
+     344,
+     "Step",
+     ""
+    ],
+    [
+     351,
+     "Scrape",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.045,
+    "cuadro_mas_bajo": 75,
+    "cierre_grados": 0.0
+   },
+   "nota": "En el juego: AdjustSpeed(velocidad real / 8); para buscar (12) 1.5."
+  },
+  "Choir_AcechoQuieto": {
+   "rig": "Choir_Rig",
+   "cuadros": 360,
+   "segundos": 12.0,
+   "loop": true,
+   "prioridad": "Idle",
+   "velocidad": null,
+   "marcas": [],
+   "revision": {
+    "piso": 0.004,
+    "cuadro_mas_bajo": 90,
+    "cierre_grados": 0.0
+   },
+   "nota": "De pie, cambiando el peso; arriba, lo mismo que Acecho."
+  },
+  "Choir_Remate": {
+   "rig": "Choir_Rig",
+   "cuadros": 126,
+   "segundos": 4.2,
+   "loop": false,
+   "prioridad": "Action3",
+   "velocidad": null,
+   "marcas": [
+    [
+     18,
+     "Grab",
+     ""
+    ],
+    [
+     67,
+     "NeckTwist",
+     ""
+    ],
+    [
+     92,
+     "Throw",
+     ""
+    ],
+    [
+     104,
+     "Land",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.034,
+    "cuadro_mas_bajo": 30,
+    "cierre_grados": 0.0
+   },
+   "nota": "Empieza en la estrella (guía A) al mismo tiempo que Choir_Remate_R15 en el jugador; termina igual a Choir_Acecho cuadro 0. El jugador sigue la tabla 'jugador' de Choir_Remate_R15.json."
+  },
+  "Mute_Reposo": {
+   "rig": "Mute_Rig",
+   "cuadros": 240,
+   "segundos": 8.0,
+   "loop": true,
+   "prioridad": "Idle",
+   "velocidad": null,
+   "marcas": [],
+   "revision": {
+    "piso": 0.011,
+    "cuadro_mas_bajo": 150,
+    "cierre_grados": 0.0
+   },
+   "nota": "Reza de pie. Mudo: sin marcas. 150-190 se congela con la cabeza al frente (te vio)."
+  },
+  "Mute_Caza": {
+   "rig": "Mute_Rig",
+   "cuadros": 60,
+   "segundos": 2.0,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 19.0,
+   "marcas": [],
+   "revision": {
+    "piso": 0.001,
+    "cuadro_mas_bajo": 18,
+    "cierre_grados": 0.0
+   },
+   "nota": "En cuatro patas, galope de 20 cuadros. AdjustSpeed(velocidad real / 19). Mudo: sin marcas."
+  },
+  "Blind_Reposo": {
+   "rig": "Blind_Rig",
+   "cuadros": 240,
+   "segundos": 8.0,
+   "loop": true,
+   "prioridad": "Idle",
+   "velocidad": null,
+   "marcas": [
+    [
+     182,
+     "Pat",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.014,
+    "cuadro_mas_bajo": 0,
+    "cierre_grados": 0.0
+   },
+   "nota": "Sentado en el muñón; la mano extra tantea el aire; 150-180 se congela y en 182 palmea el piso."
+  },
+  "Blind_Caza": {
+   "rig": "Blind_Rig",
+   "cuadros": 72,
+   "segundos": 2.4,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 15.0,
+   "marcas": [
+    [
+     0,
+     "HandPlant",
+     ""
+    ],
+    [
+     12,
+     "HandPlant",
+     ""
+    ],
+    [
+     18,
+     "Pat",
+     ""
+    ],
+    [
+     24,
+     "HandPlant",
+     ""
+    ],
+    [
+     36,
+     "HandPlant",
+     ""
+    ],
+    [
+     48,
+     "HandPlant",
+     ""
+    ],
+    [
+     54,
+     "Pat",
+     ""
+    ],
+    [
+     60,
+     "HandPlant",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.062,
+    "cuadro_mas_bajo": 21,
+    "cierre_grados": 0.0
+   },
+   "nota": "Se arrastra con dos manos (jalón cada 12); la extra palmea cada 36. AdjustSpeed(velocidad / 15)."
+  },
+  "Deaf_Reposo": {
+   "rig": "Deaf_Rig",
+   "cuadros": 240,
+   "segundos": 8.0,
+   "loop": true,
+   "prioridad": "Idle",
+   "velocidad": null,
+   "marcas": [
+    [
+     182,
+     "Pat",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.02,
+    "cuadro_mas_bajo": 170,
+    "cierre_grados": 0.0
+   },
+   "nota": "Espejo del ciego; la cabeza ve y no oye: salta de golpe y en 160 se queda viendo al frente."
+  },
+  "Deaf_Caza": {
+   "rig": "Deaf_Rig",
+   "cuadros": 72,
+   "segundos": 2.4,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 15.0,
+   "marcas": [
+    [
+     0,
+     "HandPlant",
+     ""
+    ],
+    [
+     12,
+     "HandPlant",
+     ""
+    ],
+    [
+     18,
+     "Pat",
+     ""
+    ],
+    [
+     24,
+     "HandPlant",
+     ""
+    ],
+    [
+     36,
+     "HandPlant",
+     ""
+    ],
+    [
+     48,
+     "HandPlant",
+     ""
+    ],
+    [
+     54,
+     "Pat",
+     ""
+    ],
+    [
+     60,
+     "HandPlant",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.057,
+    "cuadro_mas_bajo": 21,
+    "cierre_grados": 0.0
+   },
+   "nota": "Espejo del ciego; la cabeza arriba viendo al frente, estable. AdjustSpeed(velocidad / 15)."
+  },
+  "Choir_Zarpazo": {
+   "rig": "Choir_Rig",
+   "cuadros": 36,
+   "segundos": 1.2,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     13,
+     "Hit",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.004,
+    "cuadro_mas_bajo": 21,
+    "cierre_grados": 0.0
+   },
+   "nota": "De pie (acecho). Hit 13: el daño ya lo hizo el servidor; la marca es para el sonido y la cámara."
+  },
+  "Choir_Zarpazo_A": {
+   "rig": "Choir_Rig",
+   "cuadros": 30,
+   "segundos": 1.0,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     11,
+     "Hit",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.024,
+    "cuadro_mas_bajo": 15,
+    "cierre_grados": 0.0
+   },
+   "nota": "Desde la estrella con guía A. Hit 11. Empieza y acaba en Pose_estrella."
+  },
+  "Choir_Zarpazo_B": {
+   "rig": "Choir_Rig",
+   "cuadros": 30,
+   "segundos": 1.0,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     11,
+     "Hit",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.008,
+    "cuadro_mas_bajo": 16,
+    "cierre_grados": 0.0
+   },
+   "nota": "Desde la estrella con guía B. Hit 11. Empieza y acaba en Pose_estrella."
+  },
+  "Choir_Zarpazo_C": {
+   "rig": "Choir_Rig",
+   "cuadros": 30,
+   "segundos": 1.0,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     11,
+     "Hit",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.008,
+    "cuadro_mas_bajo": 14,
+    "cierre_grados": 0.0
+   },
+   "nota": "Desde la estrella con guía C. Hit 11. Empieza y acaba en Pose_estrella."
+  },
+  "Choir_Puerta": {
+   "rig": "Choir_Rig",
+   "cuadros": 105,
+   "segundos": 3.5,
+   "loop": false,
+   "prioridad": "Action2",
+   "velocidad": null,
+   "marcas": [
+    [
+     18,
+     "DoorHit",
+     "1"
+    ],
+    [
+     38,
+     "DoorHit",
+     "2"
+    ],
+    [
+     55,
+     "DoorHit",
+     "3"
+    ],
+    [
+     69,
+     "DoorHit",
+     "4"
+    ],
+    [
+     80,
+     "DoorHit",
+     "5"
+    ],
+    [
+     90,
+     "DoorBreak",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.034,
+    "cuadro_mas_bajo": 52,
+    "cierre_grados": 0.0
+   },
+   "nota": "Rompe en el cuadro 90 = 3 s = Doors.EntityBreakTime (si cambia: AdjustSpeed(3 / EntityBreakTime)). Si deja de forzar antes, Stop(0.2). Puerta a ~7.5 studs delante de la cadera (donde llegan las caras)."
+  },
+  "Choir_Relevo_A": {
+   "rig": "Choir_Rig",
+   "cuadros": 120,
+   "segundos": 4.0,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 20.0,
+   "marcas": [
+    [
+     0,
+     "HandPlant",
+     ""
+    ],
+    [
+     5,
+     "Step",
+     ""
+    ],
+    [
+     10,
+     "HandPlant",
+     ""
+    ],
+    [
+     15,
+     "Step",
+     ""
+    ],
+    [
+     20,
+     "HandPlant",
+     ""
+    ],
+    [
+     25,
+     "Step",
+     ""
+    ],
+    [
+     30,
+     "HandPlant",
+     ""
+    ],
+    [
+     35,
+     "Step",
+     ""
+    ],
+    [
+     40,
+     "HandPlant",
+     ""
+    ],
+    [
+     45,
+     "Step",
+     ""
+    ],
+    [
+     50,
+     "HandPlant",
+     ""
+    ],
+    [
+     55,
+     "Step",
+     ""
+    ],
+    [
+     60,
+     "HandPlant",
+     ""
+    ],
+    [
+     65,
+     "Step",
+     ""
+    ],
+    [
+     70,
+     "HandPlant",
+     ""
+    ],
+    [
+     75,
+     "Step",
+     ""
+    ],
+    [
+     80,
+     "HandPlant",
+     ""
+    ],
+    [
+     85,
+     "Step",
+     ""
+    ],
+    [
+     90,
+     "HandPlant",
+     ""
+    ],
+    [
+     95,
+     "Step",
+     ""
+    ],
+    [
+     100,
+     "HandPlant",
+     ""
+    ],
+    [
+     105,
+     "Step",
+     ""
+    ],
+    [
+     110,
+     "HandPlant",
+     ""
+    ],
+    [
+     115,
+     "Step",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.078,
+    "cuadro_mas_bajo": 35,
+    "cierre_grados": 0.0
+   },
+   "nota": "Guía A. En el juego: AdjustSpeed(velocidad real / 20)."
+  },
+  "Choir_Relevo_B": {
+   "rig": "Choir_Rig",
+   "cuadros": 120,
+   "segundos": 4.0,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 20.0,
+   "marcas": [
+    [
+     0,
+     "HandPlant",
+     ""
+    ],
+    [
+     3,
+     "Step",
+     ""
+    ],
+    [
+     7,
+     "HandPlant",
+     ""
+    ],
+    [
+     13,
+     "Step",
+     ""
+    ],
+    [
+     14,
+     "HandPlant",
+     ""
+    ],
+    [
+     20,
+     "HandPlant",
+     ""
+    ],
+    [
+     23,
+     "Step",
+     ""
+    ],
+    [
+     27,
+     "HandPlant",
+     ""
+    ],
+    [
+     33,
+     "Step",
+     ""
+    ],
+    [
+     34,
+     "HandPlant",
+     ""
+    ],
+    [
+     40,
+     "HandPlant",
+     ""
+    ],
+    [
+     43,
+     "Step",
+     ""
+    ],
+    [
+     47,
+     "HandPlant",
+     ""
+    ],
+    [
+     53,
+     "Step",
+     ""
+    ],
+    [
+     54,
+     "HandPlant",
+     ""
+    ],
+    [
+     60,
+     "HandPlant",
+     ""
+    ],
+    [
+     63,
+     "Step",
+     ""
+    ],
+    [
+     67,
+     "HandPlant",
+     ""
+    ],
+    [
+     73,
+     "Step",
+     ""
+    ],
+    [
+     74,
+     "HandPlant",
+     ""
+    ],
+    [
+     80,
+     "HandPlant",
+     ""
+    ],
+    [
+     83,
+     "Step",
+     ""
+    ],
+    [
+     87,
+     "HandPlant",
+     ""
+    ],
+    [
+     93,
+     "Step",
+     ""
+    ],
+    [
+     94,
+     "HandPlant",
+     ""
+    ],
+    [
+     100,
+     "HandPlant",
+     ""
+    ],
+    [
+     103,
+     "Step",
+     ""
+    ],
+    [
+     107,
+     "HandPlant",
+     ""
+    ],
+    [
+     113,
+     "Step",
+     ""
+    ],
+    [
+     114,
+     "HandPlant",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.016,
+    "cuadro_mas_bajo": 15,
+    "cierre_grados": 0.0
+   },
+   "nota": "Guía B. En el juego: AdjustSpeed(velocidad real / 20)."
+  },
+  "Choir_Relevo_C": {
+   "rig": "Choir_Rig",
+   "cuadros": 120,
+   "segundos": 4.0,
+   "loop": true,
+   "prioridad": "Movement",
+   "velocidad": 20.0,
+   "marcas": [
+    [
+     0,
+     "HandPlant",
+     ""
+    ],
+    [
+     3,
+     "Step",
+     ""
+    ],
+    [
+     7,
+     "HandPlant",
+     ""
+    ],
+    [
+     13,
+     "Step",
+     ""
+    ],
+    [
+     14,
+     "HandPlant",
+     ""
+    ],
+    [
+     20,
+     "HandPlant",
+     ""
+    ],
+    [
+     23,
+     "Step",
+     ""
+    ],
+    [
+     27,
+     "HandPlant",
+     ""
+    ],
+    [
+     33,
+     "Step",
+     ""
+    ],
+    [
+     34,
+     "HandPlant",
+     ""
+    ],
+    [
+     40,
+     "HandPlant",
+     ""
+    ],
+    [
+     43,
+     "Step",
+     ""
+    ],
+    [
+     47,
+     "HandPlant",
+     ""
+    ],
+    [
+     53,
+     "Step",
+     ""
+    ],
+    [
+     54,
+     "HandPlant",
+     ""
+    ],
+    [
+     60,
+     "HandPlant",
+     ""
+    ],
+    [
+     63,
+     "Step",
+     ""
+    ],
+    [
+     67,
+     "HandPlant",
+     ""
+    ],
+    [
+     73,
+     "Step",
+     ""
+    ],
+    [
+     74,
+     "HandPlant",
+     ""
+    ],
+    [
+     80,
+     "HandPlant",
+     ""
+    ],
+    [
+     83,
+     "Step",
+     ""
+    ],
+    [
+     87,
+     "HandPlant",
+     ""
+    ],
+    [
+     93,
+     "Step",
+     ""
+    ],
+    [
+     94,
+     "HandPlant",
+     ""
+    ],
+    [
+     100,
+     "HandPlant",
+     ""
+    ],
+    [
+     103,
+     "Step",
+     ""
+    ],
+    [
+     107,
+     "HandPlant",
+     ""
+    ],
+    [
+     113,
+     "Step",
+     ""
+    ],
+    [
+     114,
+     "HandPlant",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": -0.018,
+    "cuadro_mas_bajo": 55,
+    "cierre_grados": 0.0
+   },
+   "nota": "Guía C. En el juego: AdjustSpeed(velocidad real / 20)."
+  },
+  "Choir_Relevo_A_B": {
+   "rig": "Choir_Rig",
+   "cuadros": 18,
+   "segundos": 0.6,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": 20.0,
+   "marcas": [
+    [
+     4,
+     "GuideWake",
+     ""
+    ],
+    [
+     12,
+     "HandPlant",
+     ""
+    ],
+    [
+     16,
+     "HandPlant",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.059,
+    "cuadro_mas_bajo": 5,
+    "cierre_grados": 0.0
+   },
+   "nota": "A suelta, B despierta. Empieza en Relevo_A cuadro 0 y termina en Relevo_B cuadro 0."
+  },
+  "Choir_Relevo_B_C": {
+   "rig": "Choir_Rig",
+   "cuadros": 18,
+   "segundos": 0.6,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": 20.0,
+   "marcas": [
+    [
+     4,
+     "GuideWake",
+     ""
+    ],
+    [
+     12,
+     "HandPlant",
+     ""
+    ],
+    [
+     16,
+     "HandPlant",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.07,
+    "cuadro_mas_bajo": 3,
+    "cierre_grados": 0.0
+   },
+   "nota": "B suelta, C despierta. Empieza en Relevo_B cuadro 0 y termina en Relevo_C cuadro 0."
+  },
+  "Choir_Relevo_C_A": {
+   "rig": "Choir_Rig",
+   "cuadros": 18,
+   "segundos": 0.6,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": 20.0,
+   "marcas": [
+    [
+     4,
+     "GuideWake",
+     ""
+    ],
+    [
+     12,
+     "HandPlant",
+     ""
+    ],
+    [
+     16,
+     "HandPlant",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.061,
+    "cuadro_mas_bajo": 14,
+    "cierre_grados": 0.0
+   },
+   "nota": "C suelta, A despierta. Empieza en Relevo_C cuadro 0 y termina en Relevo_A cuadro 0."
+  },
+  "Choir_Relevo_B_A": {
+   "rig": "Choir_Rig",
+   "cuadros": 18,
+   "segundos": 0.6,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": 20.0,
+   "marcas": [
+    [
+     4,
+     "GuideWake",
+     ""
+    ],
+    [
+     12,
+     "HandPlant",
+     ""
+    ],
+    [
+     16,
+     "HandPlant",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.061,
+    "cuadro_mas_bajo": 14,
+    "cierre_grados": 0.0
+   },
+   "nota": "B suelta, A despierta. Empieza en Relevo_B cuadro 0 y termina en Relevo_A cuadro 0."
+  },
+  "Choir_Relevo_C_B": {
+   "rig": "Choir_Rig",
+   "cuadros": 18,
+   "segundos": 0.6,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": 20.0,
+   "marcas": [
+    [
+     4,
+     "GuideWake",
+     ""
+    ],
+    [
+     12,
+     "HandPlant",
+     ""
+    ],
+    [
+     16,
+     "HandPlant",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.07,
+    "cuadro_mas_bajo": 3,
+    "cierre_grados": 0.0
+   },
+   "nota": "C suelta, B despierta. Empieza en Relevo_C cuadro 0 y termina en Relevo_B cuadro 0."
+  },
+  "Choir_Relevo_A_C": {
+   "rig": "Choir_Rig",
+   "cuadros": 18,
+   "segundos": 0.6,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": 20.0,
+   "marcas": [
+    [
+     4,
+     "GuideWake",
+     ""
+    ],
+    [
+     12,
+     "HandPlant",
+     ""
+    ],
+    [
+     16,
+     "HandPlant",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.059,
+    "cuadro_mas_bajo": 5,
+    "cierre_grados": 0.0
+   },
+   "nota": "A suelta, C despierta. Empieza en Relevo_A cuadro 0 y termina en Relevo_C cuadro 0."
+  },
+  "Choir_ACaza": {
+   "rig": "Choir_Rig",
+   "cuadros": 24,
+   "segundos": 0.8,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [
+    [
+     12,
+     "HandPlant",
+     ""
+    ],
+    [
+     15,
+     "HandPlant",
+     ""
+    ],
+    [
+     18,
+     "HandPlant",
+     ""
+    ]
+   ],
+   "revision": {
+    "piso": 0.034,
+    "cuadro_mas_bajo": 5,
+    "cierre_grados": 0.0
+   },
+   "nota": "De pie → estrella (guía A) por partes; termina igual a Choir_Relevo_A cuadro 0."
+  },
+  "Choir_DeCaza": {
+   "rig": "Choir_Rig",
+   "cuadros": 30,
+   "segundos": 1.0,
+   "loop": false,
+   "prioridad": "Action",
+   "velocidad": null,
+   "marcas": [],
+   "revision": {
+    "piso": 0.034,
+    "cuadro_mas_bajo": 12,
+    "cierre_grados": 0.0
+   },
+   "nota": "Choir_Relevo_A cuadro 0 → de pie: piernas primero, luego A, B, C; las manos rezan al final."
+  }
+ }
+}
